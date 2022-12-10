@@ -65,26 +65,54 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
   if (available) {
     GetNearestEntity(scheduler);
   }
+  if (health <= 0){
+    //print drone crash
+  }
 
   if(toTargetPosStrategy){
     toTargetPosStrategy->Move(this, dt);
+    health -= 0.0001;
     if(toTargetPosStrategy->IsCompleted()){
       delete toTargetPosStrategy;
       toTargetPosStrategy = NULL;
     }
   } else if (toTargetDestStrategy) {
     toTargetDestStrategy->Move(this, dt);
-    
+    health -= 0.0001;
     // Moving the robot
     nearestEntity->SetPosition(this->GetPosition());
     nearestEntity->SetDirection(this->GetDirection());
-    if(toTargetDestStrategy->IsCompleted()){
-        delete toTargetDestStrategy;
-        toTargetDestStrategy = NULL;
+    if(toTargetDestStrategy->IsCompleted()){                //reached robot destination
+      delete toTargetDestStrategy;
+      toTargetDestStrategy = NULL;
+      if (health < 50.0){                                 //checks if it needs repair
+        for (auto entity : scheduler) {
+          JsonObject detailsTemp = entity->GetDetails();
+          std::string typeTemp = detailsTemp["type"];
+          if (typeTemp.compare("repair") == 0){
+            nearestEntity = entity;
+            destination = nearestEntity->GetPosition();
+            toRepairStrategy = new BeelineStrategy(this->GetPosition(), destination);
+            break;
+          }
+        }
+      }
+      else {                                            //
         available = true;
         nearestEntity = NULL;
+      }
     }
-  }  
+  } else if (toRepairStrategy) {
+    toRepairStrategy->Move(this, dt);
+    health -= 0.0001;
+    if(toRepairStrategy->IsCompleted()){
+      health = 100.0;
+      delete toRepairStrategy;
+      toRepairStrategy = NULL;
+      available = true;
+      nearestEntity = NULL;
+    }
+  }
 }
 
 void Drone::Rotate(double angle) {
