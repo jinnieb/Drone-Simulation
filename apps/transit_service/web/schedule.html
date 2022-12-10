@@ -68,6 +68,8 @@
         </div>
     </div>
     <div><input type="button" value="Schedule Trip" onclick="schedule()"></div>
+
+    <div><input type="button" style="margin-top: 10px;" value="Add Helicopter" onclick="addHelicopter()"></div>
     <div id="nameError"></div>
 
     <script>
@@ -76,7 +78,7 @@
 
         var trip = [];
 
-        var helicopterID = 0;
+        var helicopterID = 1;
 
         // This method is called when the document is loaded
         $(document).ready(function () {
@@ -85,7 +87,7 @@
 
             // register a mouse click event that adds circles on an image
             $('#map').click(function (e) {
-                if(trip.length < 2){
+                if (trip.length < 2) {
                     var posX = e.pageX - $(this).offset().left;
                     var posY = e.pageY - $(this).offset().top;
                     $("#map").append('<circle cx="' + posX + '" cy="' + posY + '" r="10" stroke="green" stroke-width="4" fill="yellow" />');
@@ -163,6 +165,20 @@
                 $("#map").html("");
                 $("#name").val("");
             }
+        }
+
+        function addHelicopter() {
+            api.sendCommand("CreateEntity", {
+                "type": "helicopter",
+                "name": "Helicopter-"+helicopterID,
+                "mesh": "assets/model/helicopter.glb",
+                "position": [700, 290, 400],
+                "scale": [0.025, 0.025, 0.025],
+                "direction": [1, 0, 0],
+                "speed": 40.0,
+                "offset": [0, 0.6, 0]
+            });
+            helicopterID++;
         }
     </script>
 </body>

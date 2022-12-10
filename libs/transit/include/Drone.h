@@ -26,6 +26,8 @@ class Drone : public IEntity {
 
   Vector3 GetDestination() const { return destination; }
 
+  std::string GetColor() const { return color; }
+
   JsonObject GetDetails() const { return details; }
 
   bool GetAvailability() const { return available; }
@@ -56,6 +58,7 @@ class Drone : public IEntity {
   JsonObject details;
   Vector3 position;
   Vector3 direction;
+  std::string color = "None"; // None means default color
   float jumpHeight = 0;
   bool goUp = true; // jump helper
   Vector3 destination;
