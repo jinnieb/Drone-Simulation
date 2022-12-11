@@ -5,6 +5,7 @@
 
 #include "IEntity.h"
 #include "Drone.h"
+#include "math/vector3.h"
 
 class UtilityDecorator : public IEntity {
  public:
@@ -28,6 +29,8 @@ class UtilityDecorator : public IEntity {
 
   std::string GetStrategyName();
 
+  float GetDurability() { return durability; };
+
   void SetAvailability(bool choice);
 
   void Update(double dt, std::vector<IEntity*> scheduler);
@@ -35,6 +38,8 @@ class UtilityDecorator : public IEntity {
   void SetGraph(const IGraph* graph);
 
   void SetPosition(Vector3 pos_);
+
+  void SetDurability(float durability_) { durability = durability_; };
 
   void SetDirection(Vector3 dir_);
 
@@ -48,6 +53,7 @@ class UtilityDecorator : public IEntity {
 
  protected:
   IEntity *myDrone;
+  float durability;
 };  // close class
 
 #endif  // UTILITY_DECORATOR_H_

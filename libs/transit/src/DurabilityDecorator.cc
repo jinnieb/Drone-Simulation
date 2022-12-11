@@ -37,7 +37,30 @@ void DurabilityDecorator::SetAvailability(bool choice) {
 }
 
 void DurabilityDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
-    this->UtilityDecorator::Update(dt, scheduler);
+    if (this->UtilityDecorator::GetDurability() <= 0) {
+        // break drone or see if there is any other drone near by that can take the trip and schedule it and return
+    }
+
+    Vector3 pos = this->UtilityDecorator::GetPosition();
+    Vector3 dest = this->UtilityDecorator::GetDestination();
+
+    float dist = pos.Distance(dest);
+    float dmgTaken = dist * .7;
+
+    if (this->UtilityDecorator::GetDurability() - dmgTaken > 0) { 
+        this->UtilityDecorator::Update(dt, scheduler);
+        this->UtilityDecorator::SetDurability(this->UtilityDecorator::GetDurability() - dmgTaken);
+    }
+
+    // figure out how to locate repair stations
+    else { // locate neared repair station and set its destination to that and go to it 
+        this->UtilityDecorator::SetDestination(); // set to repair station
+        Vector3 newDest = this->UtilityDecorator::GetDestination();
+        float newDist = pos.Distance(dest);
+        float newDmgTaken = dist * .7;
+        this->UtilityDecorator::SetDurability(this->UtilityDecorator::GetDurability() - newDmgTaken);
+        this->UtilityDecorator::Update(dt, scheduler);
+    }
 }
 
 void DurabilityDecorator::SetGraph(const IGraph* graph) {
