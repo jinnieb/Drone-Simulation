@@ -28,6 +28,8 @@ class Drone : public IEntity {
 
   JsonObject GetDetails() const { return details; }
 
+  float GetHealth() const { return health; }
+
   bool GetAvailability() const { return available; }
 
   void GetNearestEntity(std::vector<IEntity*> scheduler);
@@ -41,6 +43,8 @@ class Drone : public IEntity {
   void SetDirection(Vector3 dir_) { direction = dir_; }
 
   void SetDestination(Vector3 des_) { destination = des_; }
+
+  void SetHealth(float heal) { health = heal; }
 
   // Rotates a drone
   void Rotate(double angle);
