@@ -1,7 +1,7 @@
 #include "SimulationModel.h"
 #include "DroneFactory.h"
 #include "RobotFactory.h"
-#include "RepairFactory.h"
+#include "RepairStationFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {

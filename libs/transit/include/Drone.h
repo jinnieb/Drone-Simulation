@@ -28,7 +28,7 @@ class Drone : public IEntity {
 
   JsonObject GetDetails() const { return details; }
 
-  float GetHealth() const { return health; }
+  // float GetHealth() const { return health; }
 
   bool GetAvailability() const { return available; }
 
@@ -44,7 +44,7 @@ class Drone : public IEntity {
 
   void SetDestination(Vector3 des_) { destination = des_; }
 
-  void SetHealth(float heal) { health = heal; }
+  // void SetHealth(float heal) { health = heal; }
 
   // Rotates a drone
   void Rotate(double angle);
@@ -66,6 +66,7 @@ class Drone : public IEntity {
   float speed;
   bool available;
   bool pickedUp;
+  //float health = 100.0;
   std::string strategyName;
   IEntity* nearestEntity = NULL;
   IStrategy* toTargetPosStrategy = NULL;
