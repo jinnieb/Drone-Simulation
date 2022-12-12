@@ -1,6 +1,7 @@
 #include "SimulationModel.h"
 #include "DroneFactory.h"
 #include "RobotFactory.h"
+#include "RepairStationFactory.h"
 #include "CarFactory.h"
 #include "HelicopterFactory.h"
 
@@ -9,6 +10,7 @@ SimulationModel::SimulationModel(IController& controller)
   compFactory = new CompositeFactory();
   AddFactory(new DroneFactory());
   AddFactory(new RobotFactory());
+  AddFactory(new RepairFactory());
   AddFactory(new CarFactory());
   AddFactory(new HelicopterFactory());
 }

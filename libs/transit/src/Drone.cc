@@ -65,7 +65,6 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
   if (available) {
     GetNearestEntity(scheduler);
   }
-
   if(toTargetPosStrategy){
     toTargetPosStrategy->Move(this, dt);
     if(toTargetPosStrategy->IsCompleted()){
@@ -75,7 +74,6 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
     }
   } else if (toTargetDestStrategy) {
     toTargetDestStrategy->Move(this, dt);
-    
     // Moving the robot
     nearestEntity->SetPosition(this->GetPosition());
     nearestEntity->SetDirection(this->GetDirection());
@@ -86,7 +84,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         nearestEntity = NULL;
         color = "None"; // resets color when trip is complete
     }
-  }  
+  }
 }
 
 void Drone::Rotate(double angle) {
