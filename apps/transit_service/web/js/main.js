@@ -75,6 +75,22 @@ $( document ).ready(function() {
             var vector = new THREE.Vector3( 0, 1, 0 );
             vector = model.worldToLocal(vector);
 
+            if(e.color) {
+              model.children[0].traverse((o) => {
+                if(o.isMesh) {
+                  c = o.userData.defaultColor.clone();
+                  c.multiply(new THREE.Color(e.color));
+                  o.material.color.set(c);
+                }
+              });
+            } else {
+              model.children[0].traverse((o) => {
+                if(o.isMesh) {
+                  o.material.color.set(o.userData.defaultColor);
+                }
+              })
+            }
+
             var adjustedDirVector = model.localToWorld(new THREE.Vector3(0,0,0)).add(dir);
             model.lookAt(adjustedDirVector);
           }
@@ -313,7 +329,6 @@ function loadModels() {
           // max: Object { x: 2249.523193359375, y: 286.9197998046875, z: 1261.8768310546875 }
           // min: Object { x: -2030.950927734375, y: 220.99996948242188, z: -1184.1085205078125 }
           console.log(node);
-
         } );
 
         models.push(object);
@@ -426,6 +441,12 @@ const onLoad = ( gltf, position, scale, start, duration, details, id ) => {
   else {
     group.offset = new THREE.Vector3(0.0, 0.0, 0.0);
   }
+
+  group.traverse((o) => {
+    if(o.isMesh) {
+      o.userData.defaultColor = o.material.color.clone();
+    }
+  });
 
   models.push(group);
   scene.add( group );

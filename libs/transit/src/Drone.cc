@@ -70,17 +70,19 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
     if(toTargetPosStrategy->IsCompleted()){
       delete toTargetPosStrategy;
       toTargetPosStrategy = NULL;
+      color = "#fa0003"; // changes color to red when picked up
     }
   } else if (toTargetDestStrategy) {
     toTargetDestStrategy->Move(this, dt);
     // Moving the robot
     nearestEntity->SetPosition(this->GetPosition());
     nearestEntity->SetDirection(this->GetDirection());
-    if(toTargetDestStrategy->IsCompleted()){                //reached robot destination
-      delete toTargetDestStrategy;
-      toTargetDestStrategy = NULL;
-      available = true;
-      nearestEntity = NULL;
+    if(toTargetDestStrategy->IsCompleted()){
+        delete toTargetDestStrategy;
+        toTargetDestStrategy = NULL;
+        available = true;
+        nearestEntity = NULL;
+        color = "None"; // resets color when trip is complete
     }
   }
 }

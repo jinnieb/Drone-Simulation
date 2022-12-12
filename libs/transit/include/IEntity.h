@@ -26,6 +26,7 @@ class IEntity {
   virtual Vector3 GetDirection() const = 0;
   virtual Vector3 GetDestination() const = 0;
   virtual JsonObject GetDetails() const = 0;
+  virtual std::string GetColor() const { return "None"; }
   virtual float GetSpeed() const = 0;
   virtual bool GetAvailability() const {};
   virtual std::string GetStrategyName(){}
