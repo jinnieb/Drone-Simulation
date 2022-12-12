@@ -67,6 +67,10 @@ void DurabilityDecorator::SetGraph(const IGraph* graph) {
     this->UtilityDecorator::SetGraph(graph);
 }
 
+void DurabilityDecorator::SetColor(std::string color_) {
+    this->UtilityDecorator::SetColor(color_);
+}
+
 void DurabilityDecorator::SetPosition(Vector3 pos_) {
     this->UtilityDecorator::SetPosition(pos_);
 }

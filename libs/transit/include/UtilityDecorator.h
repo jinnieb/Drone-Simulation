@@ -9,7 +9,7 @@
 
 class UtilityDecorator : public IEntity {
  public:
-  UtilityDecorator(Drone *myDrone_) {
+  UtilityDecorator(Drone *myDrone_) { // update constuctor to take in a repair station vector 
     this->myDrone = myDrone_;
   }
 
@@ -35,6 +35,8 @@ class UtilityDecorator : public IEntity {
 
   void Update(double dt, std::vector<IEntity*> scheduler);
 
+  void SetColor(std::string color_);
+
   void SetGraph(const IGraph* graph);
 
   void SetPosition(Vector3 pos_);
@@ -53,6 +55,7 @@ class UtilityDecorator : public IEntity {
 
  protected:
   IEntity *myDrone;
+  std::vector<repairstation*> repairStations; // implement this once the repair station code is created
   float durability;
 };  // close class
 

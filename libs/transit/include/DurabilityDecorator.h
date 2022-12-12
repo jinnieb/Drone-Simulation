@@ -27,6 +27,8 @@ class DurabilityDecorator : public UtilityDecorator {
 
   void Update(double dt, std::vector<IEntity*> scheduler);
 
+  void SetColor(std::string color_);
+
   void SetGraph(const IGraph* graph);
 
   void SetPosition(Vector3 pos_);
@@ -41,8 +43,6 @@ class DurabilityDecorator : public UtilityDecorator {
 
   void Jump(double height);
 
- protected:
-  IEntity *myDrone;
 };  // close class
 
-#endif  // UTILITY_DECORATOR_H_
+#endif  // DURABILITY_DECORATOR_H_

@@ -48,6 +48,10 @@ void UtilityDecorator::SetPosition(Vector3 pos_) {
     this->myDrone->SetPosition(pos_);
 }
 
+void UtilityDecorator::SetColor(std::string color_) {
+    this->myDrone->SetColor(color_);
+}
+
 void UtilityDecorator::SetDirection(Vector3 dir_) {
     this->myDrone->SetDirection(dir_);
 }
