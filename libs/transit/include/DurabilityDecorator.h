@@ -5,7 +5,7 @@
 
 class DurabilityDecorator : public UtilityDecorator {
  public:
-  DurabilityDecorator(Drone* myDrone_) : UtilityDecorator(myDrone_) {}
+  DurabilityDecorator(Drone* myDrone_, std::vector<Repair*> *repairStations_) : UtilityDecorator(myDrone_, repairStations_) {}
 
   Vector3 GetPosition() const;
 
