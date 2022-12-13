@@ -24,6 +24,12 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
   
+  if (type.compare("repair") == 0) {
+    repairStations.push_back(myNewEntity);
+  }
+  if (type.compare("drone") == 0) {
+    // wrap with durability decorator
+  }
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);

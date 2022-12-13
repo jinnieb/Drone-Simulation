@@ -10,7 +10,7 @@
 
 class UtilityDecorator : public IEntity {
  public:
-  UtilityDecorator(Drone *myDrone_, std::vector<Repair*> *repairStations_) { // update constuctor to take in a repair station vector 
+  UtilityDecorator(Drone *myDrone_, std::vector<Repair*> repairStations_) { // update constuctor to take in a repair station vector 
     this->myDrone = myDrone_;
     this->repairStations = repairStations_;
   }
