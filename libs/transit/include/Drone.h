@@ -41,6 +41,8 @@ class Drone : public IEntity {
 
   void SetPosition(Vector3 pos_) { position = pos_; }
 
+  void SetColor(std::string color_) { color = color_; }
+
   // Sets the drone's direction
   void SetDirection(Vector3 dir_) { direction = dir_; }
 
