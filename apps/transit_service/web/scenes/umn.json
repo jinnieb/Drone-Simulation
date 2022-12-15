@@ -20,7 +20,7 @@
         "command": "CreateEntity",
         "params": {
             "type": "repair",
-            "name": "Repair",
+            "name": "Repair Station",
             "mesh": "assets/model/UFO.glb",
             "position": [260, 300, -280],
             "scale": [0.9, 0.9, 0.9],

@@ -35,6 +35,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
+  controller.SendEventToView("RepairStationCreated", entity);
 }
 
 /// Schedules a trip for an object in the scene
