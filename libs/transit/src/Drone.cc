@@ -27,6 +27,7 @@ Drone::~Drone() {
 }
 
 void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
+  std::cout << "testing" << std::endl;
   float minDis = std::numeric_limits<float>::max();
   for (auto entity : scheduler) {
     if (entity->GetAvailability()) {
@@ -39,14 +40,16 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
   }
 
   if(nearestEntity){
+    std::cout << "testing2" << std::endl;
     nearestEntity->SetAvailability(false);  // set availability to the nearest entity
     available = false;
     pickedUp = false;
 
     destination = nearestEntity->GetPosition();
-
+    std::cout << "testing4" << std::endl;
     toTargetPosStrategy = new BeelineStrategy(this->GetPosition(), destination);
     std::string targetStrategyName = nearestEntity->GetStrategyName();
+    std::cout << "testing3" << std::endl;
     if(targetStrategyName.compare("astar") == 0){
         toTargetDestStrategy = new AstarStrategy(nearestEntity->GetPosition(), nearestEntity->GetDestination(), graph);
         toTargetDestStrategy = new SpinDecorator(toTargetDestStrategy);
@@ -58,6 +61,7 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
         toTargetDestStrategy = new SpinDecorator(toTargetDestStrategy);
         toTargetDestStrategy = new JumpDecorator(toTargetDestStrategy);
     } 
+    std::cout << "testing5" << std::endl;
   }
 }
 

@@ -27,6 +27,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   
   if (type.compare("repair") == 0) {
     repairStations.push_back(myNewEntity);
+    scheduler.push_back(myNewEntity);
   }
   if (type.compare("drone") == 0) {
     myNewEntity = new DurabilityDecorator(myNewEntity, repairStations);
