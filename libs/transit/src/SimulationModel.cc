@@ -32,9 +32,6 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
     myNewEntity = new DurabilityDecorator(myNewEntity, repairStations);
     // wrap with durability decorator
   }
- //if (type.compare("repair")) {
-    //controller.SendEventToView("RepairStationCreated", entity);
- // }
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
