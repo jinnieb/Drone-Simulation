@@ -63,7 +63,13 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
-    entities[i]->Update(dt, scheduler);
+    if (dynamic_cast<DurabilityDecorator*>(entities[i]) == nullptr) {
+      entities[i]->Update(dt, scheduler);
+    }
+    else {
+      dynamic_cast<DurabilityDecorator*>(entities[i])->SetRepairStations(this->repairStations);
+      entities[i]->Update(dt, scheduler);
+    }
     controller.UpdateEntity(*entities[i]);
   }
 }

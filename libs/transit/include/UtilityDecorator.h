@@ -46,6 +46,8 @@ class UtilityDecorator : public IEntity {
 
   void SetDurability(float durability_) { durability = durability_; };
 
+  void SetRepairStations(std::vector<IEntity*> repairStations_) { repairStations = repairStations_; };
+
   void SetDirection(Vector3 dir_);
 
   void SetDestination(Vector3 des_);
