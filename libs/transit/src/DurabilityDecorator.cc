@@ -1,96 +1,64 @@
 #include "DurabilityDecorator.h"
 
-Vector3 DurabilityDecorator::GetPosition() const {
-    return this->UtilityDecorator::GetPosition();
-}
-
-Vector3 DurabilityDecorator::GetDirection() const {
-    return this->UtilityDecorator::GetDirection();
-}
-
-Vector3 DurabilityDecorator::GetDestination() const {
-    return this->UtilityDecorator::GetDestination();
-}
-
-JsonObject DurabilityDecorator::GetDetails() const {
-    return this->UtilityDecorator::GetDetails();
-}
-
-std::string DurabilityDecorator::GetColor() const {
-    return this->UtilityDecorator::GetColor();
-}
-
-float DurabilityDecorator::GetSpeed() const {
-    return this->UtilityDecorator::GetSpeed();
-}
-
-bool DurabilityDecorator::GetAvailability() const {
-    return this->UtilityDecorator::GetAvailability();
-}
-
-std::string DurabilityDecorator::GetStrategyName() {
-    return this->UtilityDecorator::GetStrategyName();
-}
-
-void DurabilityDecorator::SetAvailability(bool choice) {
-    this->UtilityDecorator::SetAvailability(choice);
-}
-
 void DurabilityDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
-    if (this->UtilityDecorator::GetDurability() <= 0) {
+    
+    if (this->UtilityDecorator::GetDurability() > 70) {
+        this->UtilityDecorator::SetColor("green");
+    } 
+    else if (this->UtilityDecorator::GetDurability() > 20) {
+        this->UtilityDecorator::SetColor("orange");
+    }
+    else {
+        this->UtilityDecorator::SetColor("red");
+    }
+
+    if (this->GetDurability() <= 0) {
+        delete this->myDrone;
+        std::cout << "Drone has broken" << std::endl;
+        return;
         // break drone or see if there is any other drone near by that can take the trip and schedule it and return
     }
 
-    Vector3 pos = this->UtilityDecorator::GetPosition();
-    Vector3 dest = this->UtilityDecorator::GetDestination();
+    float dmgTaken = dt * .25;
 
-    float dist = pos.Distance(dest);
-    float dmgTaken = dist * .7;
+    if (!this->myDrone->GetAvailability()) {
+        for (auto repair: this->repairStations) {
+            if (this->myDrone->GetPosition().Distance(repair->GetPosition()) < 10) {
+                this->SetDurability(100);
+                repair->SetAvailability(false);
+            }
+        }
+        this->myDrone->Update(dt, scheduler);
+        this->SetDurability(this->GetDurability() - dmgTaken);
+        return;
+    }
 
-    if (this->UtilityDecorator::GetDurability() - dmgTaken > 0) { 
-        this->UtilityDecorator::Update(dt, scheduler);
-        this->UtilityDecorator::SetDurability(this->UtilityDecorator::GetDurability() - dmgTaken);
+    // std::cout << this->GetDurability() << std::endl;
+    if (this->myDrone->GetAvailability() && this->GetDurability() > 20) {
+        this->myDrone->Update(dt, scheduler);
+        return;
     }
 
     // figure out how to locate repair stations
-    else { // locate neared repair station and set its destination to that and go to it 
-        this->UtilityDecorator::SetDestination(); // set to repair station
-        Vector3 newDest = this->UtilityDecorator::GetDestination();
-        float newDist = pos.Distance(dest);
-        float newDmgTaken = dist * .7;
-        this->UtilityDecorator::SetDurability(this->UtilityDecorator::GetDurability() - newDmgTaken);
-        this->UtilityDecorator::Update(dt, scheduler);
+    else if (this->myDrone->GetAvailability() && this->GetDurability() < 20) { // locate nearest repair station and set its destination to that and go to it 
+        IEntity* nearestEntity = NULL;
+        float minDis = std::numeric_limits<float>::max();
+        for (auto entity : this->repairStations) {
+            if (!entity->GetAvailability()) {
+                float disToEntity = this->myDrone->GetPosition().Distance(entity->GetPosition());
+                if (disToEntity <= minDis) {
+                    minDis = disToEntity;
+                    nearestEntity = entity;
+                }
+            }
+        }
+
+        if (nearestEntity) {
+            nearestEntity->SetAvailability(true);
+            float distToRepair = this->myDrone->GetPosition().Distance(nearestEntity->GetPosition());
+            this->myDrone->SetDestination(nearestEntity->GetPosition());
+            this->myDrone->Update(dt, scheduler);
+        }
     }
-}
 
-void DurabilityDecorator::SetGraph(const IGraph* graph) {
-    this->UtilityDecorator::SetGraph(graph);
-}
-
-void DurabilityDecorator::SetColor(std::string color_) {
-    this->UtilityDecorator::SetColor(color_);
-}
-
-void DurabilityDecorator::SetPosition(Vector3 pos_) {
-    this->UtilityDecorator::SetPosition(pos_);
-}
-
-void DurabilityDecorator::SetDirection(Vector3 dir_) {
-    this->UtilityDecorator::SetDirection(dir_);
-}
-
-void DurabilityDecorator::SetDestination(Vector3 des_) {
-    this->UtilityDecorator::SetDestination(des_);
-}
-
-void DurabilityDecorator::SetStrategyName(std::string strategyName_) {
-    this->UtilityDecorator::SetStrategyName(strategyName_);
-}
-
-void DurabilityDecorator::Rotate(double angle) {
-    this->UtilityDecorator::Rotate(angle);
-}
-
-void DurabilityDecorator::Jump(double height) {
-    this->UtilityDecorator::Jump(height);
 }

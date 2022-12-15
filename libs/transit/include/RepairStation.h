@@ -25,6 +25,12 @@ class Repair : public IEntity {
 
   float GetSpeed() const { return speed; }
 
+  std::string GetStrategyName() {return strategyName;}
+
+  void SetStrategyName(std::string strategyName_) { strategyName = strategyName_;}
+
+  void SetAvailability(bool choice) {available = choice;}
+
  private:
   JsonObject details;
   Vector3 position;
@@ -32,6 +38,7 @@ class Repair : public IEntity {
   Vector3 destination;
   float speed;
   bool available;
+  std::string strategyName = "astar";
 };
 
 #endif  // Repair

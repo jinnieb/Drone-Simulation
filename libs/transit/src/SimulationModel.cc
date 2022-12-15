@@ -4,6 +4,7 @@
 #include "RepairStationFactory.h"
 #include "CarFactory.h"
 #include "HelicopterFactory.h"
+#include "DurabilityDecorator.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -24,6 +25,15 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
   
+  if (type.compare("repair") == 0) {
+    repairStations.push_back(myNewEntity);
+    scheduler.push_back(myNewEntity);
+    controller.SendEventToView("RepairStationCreated", entity);
+  }
+  if (type.compare("drone") == 0) {
+    myNewEntity = new DurabilityDecorator(myNewEntity, repairStations);
+    // wrap with durability decorator
+  }
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
@@ -54,7 +64,13 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
-    entities[i]->Update(dt, scheduler);
+    if (dynamic_cast<DurabilityDecorator*>(entities[i]) == nullptr) {
+      entities[i]->Update(dt, scheduler);
+    }
+    else {
+      dynamic_cast<DurabilityDecorator*>(entities[i])->SetRepairStations(this->repairStations);
+      entities[i]->Update(dt, scheduler);
+    }
     controller.UpdateEntity(*entities[i]);
   }
 }

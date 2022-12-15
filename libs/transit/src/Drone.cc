@@ -44,7 +44,6 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
     pickedUp = false;
 
     destination = nearestEntity->GetPosition();
-
     toTargetPosStrategy = new BeelineStrategy(this->GetPosition(), destination);
     std::string targetStrategyName = nearestEntity->GetStrategyName();
     if(targetStrategyName.compare("astar") == 0){
