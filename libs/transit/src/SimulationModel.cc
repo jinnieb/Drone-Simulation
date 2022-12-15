@@ -30,9 +30,13 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   if (type.compare("drone") == 0) {
     // wrap with durability decorator
   }
+ //if (type.compare("repair")) {
+    //controller.SendEventToView("RepairStationCreated", entity);
+ // }
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
+  controller.SendEventToView("RepairStationCreated", entity);
 }
 
 /// Schedules a trip for an object in the scene

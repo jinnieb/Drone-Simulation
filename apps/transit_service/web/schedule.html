@@ -6,7 +6,7 @@
             margin-left: 50px;
         }
 
-        #popup {
+        #popup, #popup1 {
             padding: 30px;
             position: absolute;
             left: 400px;
@@ -35,6 +35,10 @@
         #search-strategy {
             width: 100px;
         }
+
+        .buttons {
+            display: flex;
+        }
     </style>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/WSApi.js"></script>
@@ -43,6 +47,9 @@
 <body>
     <div id="popup">
         <h2>Your trip is scheduled!</h2>
+    </div>
+    <div id="popup1">
+        <h2>Repair Station created!</h2>
     </div>
     <div>
         <h1>Request a Trip:</h1>
@@ -63,13 +70,18 @@
 
         <div id="trips">
             <div id="list" style="width: 400px">
-                <p style="font-weight: bold;">Trips:</p>
+                <p style="font-weight: bold;">Log:</p>
             </div>
         </div>
+        
     </div>
-    <div><input type="button" value="Schedule Trip" onclick="schedule()"></div>
-
-    <div><input type="button" style="margin-top: 10px;" value="Add Helicopter" onclick="addHelicopter()"></div>
+    
+    <div class= "buttons">
+        <input type="button" id= "button1" value="Schedule Trip" onclick="schedule()">
+        <input type="button" id= "button2" style="margin-left: 10px;" value="Add Helicopter" onclick="addHelicopter()">
+        <input type="button" id= "button3" style="margin-left: 10px;" value="Add Repair Station" onclick="addRepairStation()">
+        <input type="button" id= "button4" style="margin-left: 10px;" value="Clear Points" onclick="clearMap()">
+    </div>
     <div id="nameError"></div>
 
     <script>
@@ -80,10 +92,13 @@
 
         var helicopterID = 1;
 
+        var repairID = 1;
+
         // This method is called when the document is loaded
         $(document).ready(function () {
             // hide the popup
             $("#popup").hide();
+            $("#popup1").hide();
 
             // register a mouse click event that adds circles on an image
             $('#map').click(function (e) {
@@ -113,6 +128,10 @@
                 if (data.event == "TripScheduled") {
                     $("#popup").show();
                     $("#popup").fadeOut(3000);
+                }
+                if (data.event == "RepairStationCreated") {
+                    $("#popup1").show();
+                    $("#popup1").fadeOut(3000);
                 }
             }
         }
@@ -179,6 +198,51 @@
                 "offset": [0, 0.6, 0]
             });
             helicopterID++;
+        }
+
+        function clearMap(){
+            var map = document.getElementById("map");
+            $("#map").html("");
+            trip = [];
+        }
+        
+        function addRepairStation() {
+            if (trip.length < 1) {
+                errorDiv.innerHTML += '<p style="color: red">[!] Error, missing repair station location ...</p>'
+            }
+            if (trip.length >= 1) {
+                var start = [trip[0][0] / ($("#map").width()), 1.0, trip[0][1] / ($("#map").height())];
+                var end = [trip[trip.length - 1][0] / ($("#map").width()), 1.0, trip[trip.length - 1][1] / ($("#map").height())];
+                console.log(start);
+                var scale = 0.705;
+                var min = { x: -2030.950927734375, y: 220.99996948242188, z: -1184.1085205078125 };
+                var max = { x: 2249.523193359375, y: 286.9197998046875, z: 1261.8768310546875 };
+
+                api.sendCommand("CreateEntity", {
+                    "type": "repair",
+                    "name": "Repair Station-"+repairID,
+                    "mesh": "assets/model/UFO.glb",
+                    "position": [(min.x + (max.x - min.x) * end[0]) * scale, 300.0 * end[1], (min.z + (max.z - min.z) * end[2]) * scale],
+                    "scale": [0.9, 0.9, 0.9],
+                    "direction": [1, 0, 0],
+                    "speed": 0.0,
+                    "radius": 1.0,
+                    "rotation": [0, 0, 0, 0],
+                    "start": 2.0,
+                    "duration": 2.0,
+                    "offset": [0, 0.6, 0]
+                });
+                repairID++;
+                var name = "Repair Station-"+(repairID-1);
+                var details = name + ": ";
+                details += "(" + trip[0][0].toFixed(1) + ", " + trip[0][1].toFixed(1) + ")";
+                $("#list").append("<p class='trip'>" + details + "</p>");
+
+                // reset the trip
+                trip = [];
+                $("#map").html("");
+                $("#name").val("");
+            }
         }
     </script>
 </body>
