@@ -10,9 +10,10 @@
 
 class UtilityDecorator : public IEntity {
  public:
-  UtilityDecorator(Drone *myDrone_, std::vector<Repair*> repairStations_) { // update constuctor to take in a repair station vector 
+  UtilityDecorator(IEntity *myDrone_, std::vector<IEntity*> repairStations_) { // update constuctor to take in a repair station vector 
     this->myDrone = myDrone_;
     this->repairStations = repairStations_;
+    this->durability = 100.0;
   }
 
   Vector3 GetPosition() const;
@@ -57,7 +58,7 @@ class UtilityDecorator : public IEntity {
 
  protected:
   IEntity *myDrone;
-  std::vector<Repair*> repairStations; // implement this once the repair station code is created
+  std::vector<IEntity*> repairStations; // implement this once the repair station code is created
   float durability;
 };  // close class
 

@@ -4,6 +4,7 @@
 #include "RepairStationFactory.h"
 #include "CarFactory.h"
 #include "HelicopterFactory.h"
+#include "DurabilityDecorator.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -28,6 +29,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
     repairStations.push_back(myNewEntity);
   }
   if (type.compare("drone") == 0) {
+    myNewEntity = new DurabilityDecorator(myNewEntity, repairStations);
     // wrap with durability decorator
   }
  //if (type.compare("repair")) {
