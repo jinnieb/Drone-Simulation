@@ -32,15 +32,16 @@ Collaboration diagram for Beeline\+Strategy\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBeelineStrategy_a5672d5a2f179ccde216e46ca1ee2281d}\label{classBeelineStrategy_a5672d5a2f179ccde216e46ca1ee2281d}} 
-{\bfseries Beeline\+Strategy} (\mbox{\hyperlink{classVector3}{Vector3}} position, \mbox{\hyperlink{classVector3}{Vector3}} destination)
-\item 
-\mbox{\Hypertarget{classBeelineStrategy_ab8d3f5b05d5e9dd06465f5fc4cd4767e}\label{classBeelineStrategy_ab8d3f5b05d5e9dd06465f5fc4cd4767e}} 
-void {\bfseries Move} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
-\item 
+\mbox{\hyperlink{classBeelineStrategy_a5672d5a2f179ccde216e46ca1ee2281d}{Beeline\+Strategy}} (\mbox{\hyperlink{classVector3}{Vector3}} position, \mbox{\hyperlink{classVector3}{Vector3}} destination)
+\begin{DoxyCompactList}\small\item\em Beeline strategy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBeelineStrategy_ab2b5b091b722359b48b91fa8aedd5dc5}\label{classBeelineStrategy_ab2b5b091b722359b48b91fa8aedd5dc5}} 
+\mbox{\hyperlink{classBeelineStrategy_ab2b5b091b722359b48b91fa8aedd5dc5}{$\sim$\+Beeline\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Beeline strategy destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeelineStrategy_ab8d3f5b05d5e9dd06465f5fc4cd4767e}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
+\begin{DoxyCompactList}\small\item\em Moves an entity based on the Beeline strategy. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBeelineStrategy_a648eae389f7844f210ac267313ef6233}\label{classBeelineStrategy_a648eae389f7844f210ac267313ef6233}} 
-bool {\bfseries Is\+Completed} ()
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classBeelineStrategy_a648eae389f7844f210ac267313ef6233}{Is\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the Beeline strategy is at the destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -49,7 +50,51 @@ this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} clas
 
 include 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBeelineStrategy_a5672d5a2f179ccde216e46ca1ee2281d}\label{classBeelineStrategy_a5672d5a2f179ccde216e46ca1ee2281d}} 
+\index{BeelineStrategy@{BeelineStrategy}!BeelineStrategy@{BeelineStrategy}}
+\index{BeelineStrategy@{BeelineStrategy}!BeelineStrategy@{BeelineStrategy}}
+\doxysubsubsection{\texorpdfstring{BeelineStrategy()}{BeelineStrategy()}}
+{\footnotesize\ttfamily Beeline\+Strategy\+::\+Beeline\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{position,  }\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{destination }\end{DoxyParamCaption})}
+
+
+
+Beeline strategy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & position vector. \\
+\hline
+{\em destination} & destination vector. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBeelineStrategy_ab8d3f5b05d5e9dd06465f5fc4cd4767e}\label{classBeelineStrategy_ab8d3f5b05d5e9dd06465f5fc4cd4767e}} 
+\index{BeelineStrategy@{BeelineStrategy}!Move@{Move}}
+\index{Move@{Move}!BeelineStrategy@{BeelineStrategy}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Beeline\+Strategy\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves an entity based on the Beeline strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The entity moved \\
+\hline
+{\em dt} & simulation time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a69254389f4ef9a851dc5d40c4cc9aacd}{I\+Strategy}}.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/kim01540/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04-\/1/libs/transit/include/Beeline\+Strategy.\+h\item 
-/home/kim01540/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04-\/1/libs/transit/src/Beeline\+Strategy.\+cc\end{DoxyCompactItemize}
+/home/bye00036/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/include/Beeline\+Strategy.\+h\item 
+/home/bye00036/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/src/Beeline\+Strategy.\+cc\end{DoxyCompactItemize}

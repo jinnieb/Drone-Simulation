@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/kim01540/csci-3081w-f22/Team-001-18-homework04-1/libs/transit/include/RepairStation.h Source File</title>
+<title>My Project: /home/bye00036/csci-3081w-f22/Team-001-18-homework04/libs/transit/include/RepairStation.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,57 +77,64 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;IEntity.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;math/vector3.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;util/json.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classRepair.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRepair.html">Repair</a> : <span class="keyword">public</span> <a class="code" href="classIEntity.html">IEntity</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classRepair.html">Repair</a>(JsonObject&amp; obj);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  ~<a class="code" href="classRepair.html">Repair</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classRepair.html#aefa3f2f953990e5eb58916bea470dd13">   16</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRepair.html#aefa3f2f953990e5eb58916bea470dd13">GetPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classRepair.html#aad9ae0d4325a5df209fa15daa873a8b0">   18</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRepair.html#aad9ae0d4325a5df209fa15daa873a8b0">GetDirection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> direction; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classRepair.html#a079bb076fc2a376c67f7d866c8a87b1a">   20</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRepair.html#a079bb076fc2a376c67f7d866c8a87b1a">GetDestination</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> destination; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classRepair.html#a5b1672c0addc90eaced6f79bfbfc93d7">   22</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRepair.html#a5b1672c0addc90eaced6f79bfbfc93d7">GetAvailability</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> available; }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  JsonObject <a class="code" href="classRepair.html#aada58214eafa42787f71300985178909">GetDetails</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classRepair.html#ab0487b651024601ea8601013401fee14">   26</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classRepair.html#ab0487b651024601ea8601013401fee14">GetSpeed</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> speed; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classRepair.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRepair.html">Repair</a> : <span class="keyword">public</span> <a class="code" href="classIEntity.html">IEntity</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classRepair.html#ab7e7c5baf47debe82927f0bb58d650f0">Repair</a>(JsonObject&amp; obj);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classRepair.html#a4d61c7cba5e4ae6d90a644ad3184da53">~Repair</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classRepair.html#acab30fdcba7e5810e2fecd2677c23da6">   28</a></span>&#160;  std::string <a class="code" href="classRepair.html#acab30fdcba7e5810e2fecd2677c23da6">GetStrategyName</a>() {<span class="keywordflow">return</span> strategyName;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classRepair.html#a1a6f2c5476d81db3597bf713131ca2e3">   30</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRepair.html#a1a6f2c5476d81db3597bf713131ca2e3">SetStrategyName</a>(std::string strategyName_) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    strategyName = strategyName_;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classRepair.html#a60aacd1a644e555e5605a2bceac2d877">   34</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRepair.html#a60aacd1a644e555e5605a2bceac2d877">SetAvailability</a>(<span class="keywordtype">bool</span> choice) {available = choice;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  JsonObject details;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> position;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> direction;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> destination;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">float</span> speed;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">bool</span> available;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  std::string strategyName = <span class="stringliteral">&quot;astar&quot;</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif  // LIBS_TRANSIT_INCLUDE_REPAIRSTATION_H_</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classRepair.html#aefa3f2f953990e5eb58916bea470dd13">   33</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRepair.html#aefa3f2f953990e5eb58916bea470dd13">GetPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classRepair.html#aad9ae0d4325a5df209fa15daa873a8b0">   40</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRepair.html#aad9ae0d4325a5df209fa15daa873a8b0">GetDirection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> direction; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classRepair.html#a079bb076fc2a376c67f7d866c8a87b1a">   47</a></span>&#160;  <a class="code" href="classVector3.html">Vector3</a> <a class="code" href="classRepair.html#a079bb076fc2a376c67f7d866c8a87b1a">GetDestination</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> destination; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classRepair.html#a5b1672c0addc90eaced6f79bfbfc93d7">   54</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRepair.html#a5b1672c0addc90eaced6f79bfbfc93d7">GetAvailability</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> available; }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  JsonObject <a class="code" href="classRepair.html#aada58214eafa42787f71300985178909">GetDetails</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classRepair.html#ab0487b651024601ea8601013401fee14">   66</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classRepair.html#ab0487b651024601ea8601013401fee14">GetSpeed</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> speed; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classRepair.html#acab30fdcba7e5810e2fecd2677c23da6">   73</a></span>&#160;  std::string <a class="code" href="classRepair.html#acab30fdcba7e5810e2fecd2677c23da6">GetStrategyName</a>() {<span class="keywordflow">return</span> strategyName;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classRepair.html#a1a6f2c5476d81db3597bf713131ca2e3">   80</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRepair.html#a1a6f2c5476d81db3597bf713131ca2e3">SetStrategyName</a>(std::string strategyName_) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    strategyName = strategyName_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classRepair.html#a60aacd1a644e555e5605a2bceac2d877">   89</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRepair.html#a60aacd1a644e555e5605a2bceac2d877">SetAvailability</a>(<span class="keywordtype">bool</span> choice) {available = choice;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  JsonObject details;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> position;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> direction;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> destination;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">float</span> speed;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">bool</span> available;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  std::string strategyName = <span class="stringliteral">&quot;astar&quot;</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif  // LIBS_TRANSIT_INCLUDE_REPAIRSTATION_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassRepair_html_a5b1672c0addc90eaced6f79bfbfc93d7"><div class="ttname"><a href="classRepair.html#a5b1672c0addc90eaced6f79bfbfc93d7">Repair::GetAvailability</a></div><div class="ttdeci">bool GetAvailability() const</div><div class="ttdoc">Get availability.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:22</div></div>
-<div class="ttc" id="aclassRepair_html_aad9ae0d4325a5df209fa15daa873a8b0"><div class="ttname"><a href="classRepair.html#aad9ae0d4325a5df209fa15daa873a8b0">Repair::GetDirection</a></div><div class="ttdeci">Vector3 GetDirection() const</div><div class="ttdoc">Get direction.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:18</div></div>
-<div class="ttc" id="aclassRepair_html_a079bb076fc2a376c67f7d866c8a87b1a"><div class="ttname"><a href="classRepair.html#a079bb076fc2a376c67f7d866c8a87b1a">Repair::GetDestination</a></div><div class="ttdeci">Vector3 GetDestination() const</div><div class="ttdoc">Get destination.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:20</div></div>
-<div class="ttc" id="aclassRepair_html_aada58214eafa42787f71300985178909"><div class="ttname"><a href="classRepair.html#aada58214eafa42787f71300985178909">Repair::GetDetails</a></div><div class="ttdeci">JsonObject GetDetails() const override</div><div class="ttdoc">Get information.</div><div class="ttdef"><b>Definition:</b> RepairStation.cc:14</div></div>
+<div class="ttc" id="aclassRepair_html_a5b1672c0addc90eaced6f79bfbfc93d7"><div class="ttname"><a href="classRepair.html#a5b1672c0addc90eaced6f79bfbfc93d7">Repair::GetAvailability</a></div><div class="ttdeci">bool GetAvailability() const</div><div class="ttdoc">Get the availability of repair.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:54</div></div>
+<div class="ttc" id="aclassRepair_html_aad9ae0d4325a5df209fa15daa873a8b0"><div class="ttname"><a href="classRepair.html#aad9ae0d4325a5df209fa15daa873a8b0">Repair::GetDirection</a></div><div class="ttdeci">Vector3 GetDirection() const</div><div class="ttdoc">Get the repair direction.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:40</div></div>
+<div class="ttc" id="aclassRepair_html_a079bb076fc2a376c67f7d866c8a87b1a"><div class="ttname"><a href="classRepair.html#a079bb076fc2a376c67f7d866c8a87b1a">Repair::GetDestination</a></div><div class="ttdeci">Vector3 GetDestination() const</div><div class="ttdoc">Get the repair destination.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:47</div></div>
+<div class="ttc" id="aclassRepair_html_aada58214eafa42787f71300985178909"><div class="ttname"><a href="classRepair.html#aada58214eafa42787f71300985178909">Repair::GetDetails</a></div><div class="ttdeci">JsonObject GetDetails() const override</div><div class="ttdoc">Get information of repair.</div><div class="ttdef"><b>Definition:</b> RepairStation.cc:14</div></div>
+<div class="ttc" id="aclassRepair_html_ab7e7c5baf47debe82927f0bb58d650f0"><div class="ttname"><a href="classRepair.html#ab7e7c5baf47debe82927f0bb58d650f0">Repair::Repair</a></div><div class="ttdeci">Repair(JsonObject &amp;obj)</div><div class="ttdoc">Constructor, Repairs are created with a name.</div><div class="ttdef"><b>Definition:</b> RepairStation.cc:3</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
-<div class="ttc" id="aclassRepair_html_aefa3f2f953990e5eb58916bea470dd13"><div class="ttname"><a href="classRepair.html#aefa3f2f953990e5eb58916bea470dd13">Repair::GetPosition</a></div><div class="ttdeci">Vector3 GetPosition() const</div><div class="ttdoc">Get position.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:16</div></div>
-<div class="ttc" id="aclassRepair_html_a60aacd1a644e555e5605a2bceac2d877"><div class="ttname"><a href="classRepair.html#a60aacd1a644e555e5605a2bceac2d877">Repair::SetAvailability</a></div><div class="ttdeci">void SetAvailability(bool choice)</div><div class="ttdoc">Set availability.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:34</div></div>
-<div class="ttc" id="aclassRepair_html_acab30fdcba7e5810e2fecd2677c23da6"><div class="ttname"><a href="classRepair.html#acab30fdcba7e5810e2fecd2677c23da6">Repair::GetStrategyName</a></div><div class="ttdeci">std::string GetStrategyName()</div><div class="ttdoc">Get the name of strategy.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:28</div></div>
-<div class="ttc" id="aclassRepair_html_a1a6f2c5476d81db3597bf713131ca2e3"><div class="ttname"><a href="classRepair.html#a1a6f2c5476d81db3597bf713131ca2e3">Repair::SetStrategyName</a></div><div class="ttdeci">void SetStrategyName(std::string strategyName_)</div><div class="ttdoc">Set the name of strategy.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:30</div></div>
-<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">Abstract controller class used in the Transit Service.</div><div class="ttdef"><b>Definition:</b> IEntity.h:18</div></div>
-<div class="ttc" id="aclassRepair_html"><div class="ttname"><a href="classRepair.html">Repair</a></div><div class="ttdef"><b>Definition:</b> RepairStation.h:10</div></div>
-<div class="ttc" id="aclassRepair_html_ab0487b651024601ea8601013401fee14"><div class="ttname"><a href="classRepair.html#ab0487b651024601ea8601013401fee14">Repair::GetSpeed</a></div><div class="ttdeci">float GetSpeed() const</div><div class="ttdoc">Get speed.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:26</div></div>
+<div class="ttc" id="aclassRepair_html_aefa3f2f953990e5eb58916bea470dd13"><div class="ttname"><a href="classRepair.html#aefa3f2f953990e5eb58916bea470dd13">Repair::GetPosition</a></div><div class="ttdeci">Vector3 GetPosition() const</div><div class="ttdoc">Get the repair position.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:33</div></div>
+<div class="ttc" id="aclassRepair_html_a60aacd1a644e555e5605a2bceac2d877"><div class="ttname"><a href="classRepair.html#a60aacd1a644e555e5605a2bceac2d877">Repair::SetAvailability</a></div><div class="ttdeci">void SetAvailability(bool choice)</div><div class="ttdoc">Set the availability of repair.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:89</div></div>
+<div class="ttc" id="aclassRepair_html_a4d61c7cba5e4ae6d90a644ad3184da53"><div class="ttname"><a href="classRepair.html#a4d61c7cba5e4ae6d90a644ad3184da53">Repair::~Repair</a></div><div class="ttdeci">~Repair() override=default</div><div class="ttdoc">Deconstructor.</div></div>
+<div class="ttc" id="aclassRepair_html_acab30fdcba7e5810e2fecd2677c23da6"><div class="ttname"><a href="classRepair.html#acab30fdcba7e5810e2fecd2677c23da6">Repair::GetStrategyName</a></div><div class="ttdeci">std::string GetStrategyName()</div><div class="ttdoc">Get strategy of the repair.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:73</div></div>
+<div class="ttc" id="aclassRepair_html_a1a6f2c5476d81db3597bf713131ca2e3"><div class="ttname"><a href="classRepair.html#a1a6f2c5476d81db3597bf713131ca2e3">Repair::SetStrategyName</a></div><div class="ttdeci">void SetStrategyName(std::string strategyName_)</div><div class="ttdoc">Sets the strategy for the repair.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:80</div></div>
+<div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">Interface for Entities to be based off of.</div><div class="ttdef"><b>Definition:</b> IEntity.h:18</div></div>
+<div class="ttc" id="aclassRepair_html"><div class="ttname"><a href="classRepair.html">Repair</a></div><div class="ttdoc">Represents a repair station in a physical system.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:14</div></div>
+<div class="ttc" id="aclassRepair_html_ab0487b651024601ea8601013401fee14"><div class="ttname"><a href="classRepair.html#ab0487b651024601ea8601013401fee14">Repair::GetSpeed</a></div><div class="ttdeci">float GetSpeed() const</div><div class="ttdoc">Get speed of repair.</div><div class="ttdef"><b>Definition:</b> RepairStation.h:66</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

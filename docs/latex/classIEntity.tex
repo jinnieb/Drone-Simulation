@@ -2,7 +2,7 @@
 \label{classIEntity}\index{IEntity@{IEntity}}
 
 
-Abstract controller class used in the Transit Service.  
+Interface for Entities to be based off of.  
 
 
 
@@ -85,7 +85,7 @@ const I\+Graph $\ast$ \mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b
 
 
 \doxysubsection{Detailed Description}
-Abstract controller class used in the Transit Service. 
+Interface for Entities to be based off of. 
 
 Uses the Model View. 
 
@@ -132,7 +132,7 @@ Add height.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & double for height \\
+{\em height} & double for height \\
 \hline
 \end{DoxyParams}
 
@@ -151,7 +151,7 @@ Rotate entity.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & double for rotation angle \\
+{\em angle} & double for rotation angle \\
 \hline
 \end{DoxyParams}
 
@@ -170,12 +170,12 @@ Set availability.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & boolean for availability \\
+{\em choice} & boolean for availability \\
 \hline
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{classRobot_a2ef6424fa88e43973ade3fddb4ec649b}{Robot}}, \mbox{\hyperlink{classUtilityDecorator_abac66552fdf10023e33143077f97d4cb}{Utility\+Decorator}}, and \mbox{\hyperlink{classRepair_a60aacd1a644e555e5605a2bceac2d877}{Repair}}.
+Reimplemented in \mbox{\hyperlink{classRepair_a60aacd1a644e555e5605a2bceac2d877}{Repair}}, \mbox{\hyperlink{classRobot_a2ef6424fa88e43973ade3fddb4ec649b}{Robot}}, and \mbox{\hyperlink{classUtilityDecorator_abac66552fdf10023e33143077f97d4cb}{Utility\+Decorator}}.
 
 \mbox{\Hypertarget{classIEntity_ad93b2cbe055fad782564914833b8c6cd}\label{classIEntity_ad93b2cbe055fad782564914833b8c6cd}} 
 \index{IEntity@{IEntity}!SetColor@{SetColor}}
@@ -189,7 +189,7 @@ Set color.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & string for color \\
+{\em color\+\_\+} & string for color \\
 \hline
 \end{DoxyParams}
 
@@ -208,7 +208,7 @@ Set destination.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & \mbox{\hyperlink{classVector3}{Vector3(3\+D Vector)}} for destination \\
+{\em des\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3(3\+D Vector)}} for destination \\
 \hline
 \end{DoxyParams}
 
@@ -227,7 +227,7 @@ Set direction.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & \mbox{\hyperlink{classVector3}{Vector3(3\+D Vector)}} for direction \\
+{\em dir\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3(3\+D Vector)}} for direction \\
 \hline
 \end{DoxyParams}
 
@@ -246,7 +246,7 @@ Set graph.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & I\+Graph pointer for graph \\
+{\em graph} & I\+Graph pointer for graph \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}\label{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}} 
@@ -261,12 +261,12 @@ Set position.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & \mbox{\hyperlink{classVector3}{Vector3(3\+D Vector)}} for position \\
+{\em pos\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3(3\+D Vector)}} for position \\
 \hline
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{classDrone_a00150938e8dbfceaf81c9fb59994f6ef}{Drone}}, \mbox{\hyperlink{classUtilityDecorator_aaefc96f5eac8ead5b46229458f31554f}{Utility\+Decorator}}, \mbox{\hyperlink{classRobot_a35ce73ea17f6cfbcbfe272c6bff038ba}{Robot}}, \mbox{\hyperlink{classCar_a73dfbd1e8575d4bcae8581b7abfdd99a}{Car}}, and \mbox{\hyperlink{classHelicopter_a0a7386badb41e8f39b14095ffbfd4efd}{Helicopter}}.
+Reimplemented in \mbox{\hyperlink{classUtilityDecorator_aaefc96f5eac8ead5b46229458f31554f}{Utility\+Decorator}}, \mbox{\hyperlink{classDrone_a00150938e8dbfceaf81c9fb59994f6ef}{Drone}}, \mbox{\hyperlink{classRobot_a35ce73ea17f6cfbcbfe272c6bff038ba}{Robot}}, \mbox{\hyperlink{classCar_a73dfbd1e8575d4bcae8581b7abfdd99a}{Car}}, and \mbox{\hyperlink{classHelicopter_a0a7386badb41e8f39b14095ffbfd4efd}{Helicopter}}.
 
 \mbox{\Hypertarget{classIEntity_a933def05f85783fddbf05e8257cc8880}\label{classIEntity_a933def05f85783fddbf05e8257cc8880}} 
 \index{IEntity@{IEntity}!SetStrategyName@{SetStrategyName}}
@@ -280,7 +280,7 @@ Set the name of strategy.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & string for strategy name \\
+{\em strategy\+Name\+\_\+} & string for strategy name \\
 \hline
 \end{DoxyParams}
 
@@ -299,9 +299,9 @@ Update position.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & double for delta time \\
+{\em dt} & double for delta time \\
 \hline
-{\em b} & vector of entity pointers \\
+{\em scheduler} & vector of entity pointers \\
 \hline
 \end{DoxyParams}
 
@@ -312,4 +312,4 @@ Reimplemented in \mbox{\hyperlink{classCar_aa9dde801228bdec170224a31f4b66b34}{Ca
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/kim01540/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04-\/1/libs/transit/include/I\+Entity.\+h\end{DoxyCompactItemize}
+/home/bye00036/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/include/I\+Entity.\+h\end{DoxyCompactItemize}
