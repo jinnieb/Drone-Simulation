@@ -1,5 +1,5 @@
-#ifndef CAR_H
-#define CAR_H
+#ifndef LIBS_TRANSIT_INCLUDE_CAR_H_
+#define LIBS_TRANSIT_INCLUDE_CAR_H_
 
 #include <vector>
 
@@ -10,7 +10,7 @@
 
 class Car : public IEntity {
  public:
-  Car(JsonObject& obj);
+  Car(const JsonObject& obj);
 
   ~Car() override = default;
 
@@ -47,4 +47,4 @@ class Car : public IEntity {
   float speed;
 };
 
-#endif  // CAR_H
+#endif  // LIBS_TRANSIT_INCLUDE_CAR_H_

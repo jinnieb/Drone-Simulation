@@ -1,5 +1,5 @@
-#ifndef HELICOPTER_H
-#define HELICOPTER_H
+#ifndef LIBS_TRANSIT_INCLUDE_HELICOPTER_H_
+#define LIBS_TRANSIT_INCLUDE_HELICOPTER_H_
 
 #include <vector>
 
@@ -10,7 +10,7 @@
 
 class Helicopter : public IEntity {
  public:
-  Helicopter(JsonObject& obj);
+  Helicopter(const JsonObject& obj);
 
   ~Helicopter() override = default;
 
@@ -47,4 +47,4 @@ class Helicopter : public IEntity {
   float speed;
 };
 
-#endif  // HELICOPTER_H
+#endif  // LIBS_TRANSIT_INCLUDE_HELICOPTER_H_

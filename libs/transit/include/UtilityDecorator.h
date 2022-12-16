@@ -1,5 +1,5 @@
-#ifndef UTILITY_DECORATOR_H_
-#define UTILITY_DECORATOR_H_
+#ifndef LIBS_TRANSIT_INCLUDE_UTILITYDECORATOR_H_
+#define LIBS_TRANSIT_INCLUDE_UTILITYDECORATOR_H_
 
 #include <vector>
 
@@ -10,7 +10,8 @@
 
 class UtilityDecorator : public IEntity {
  public:
-  UtilityDecorator(IEntity *myDrone_, std::vector<IEntity*> repairStations_) { // update constuctor to take in a repair station vector 
+  // update constuctor to take in a repair station vector
+  UtilityDecorator(IEntity *myDrone_, std::vector<IEntity*> repairStations_) {
     this->myDrone = myDrone_;
     this->repairStations = repairStations_;
     this->durability = 100.0;
@@ -32,7 +33,7 @@ class UtilityDecorator : public IEntity {
 
   std::string GetStrategyName();
 
-  float GetDurability() { return durability; };
+  float GetDurability() { return durability; }
 
   void SetAvailability(bool choice);
 
@@ -44,9 +45,11 @@ class UtilityDecorator : public IEntity {
 
   void SetPosition(Vector3 pos_);
 
-  void SetDurability(float durability_) { durability = durability_; };
+  void SetDurability(float durability_) { durability = durability_; }
 
-  void SetRepairStations(std::vector<IEntity*> repairStations_) { repairStations = repairStations_; };
+  void SetRepairStations(std::vector<IEntity*> repairStations_) {
+    repairStations = repairStations_;
+  }
 
   void SetDirection(Vector3 dir_);
 
@@ -60,8 +63,9 @@ class UtilityDecorator : public IEntity {
 
  protected:
   IEntity *myDrone;
-  std::vector<IEntity*> repairStations; // implement this once the repair station code is created
+  // implement this once the repair station code is created
+  std::vector<IEntity*> repairStations;
   float durability;
 };  // close class
 
-#endif  // UTILITY_DECORATOR_H_
+#endif  // LIBS_TRANSIT_INCLUDE_UTILITYDECORATOR_H_

@@ -1,5 +1,5 @@
-#ifndef DRONE_H_
-#define DRONE_H_
+#ifndef LIBS_TRANSIT_INCLUDE_DRONE_H_
+#define LIBS_TRANSIT_INCLUDE_DRONE_H_
 
 #include <vector>
 
@@ -13,7 +13,7 @@
 class Drone : public IEntity {
  public:
   // Drones are created with a name
-  Drone(JsonObject& obj);
+  Drone(const JsonObject& obj);
   // Destructor
   ~Drone();
 
@@ -64,18 +64,18 @@ class Drone : public IEntity {
   JsonObject details;
   Vector3 position;
   Vector3 direction;
-  std::string color = "None"; // None means default color
+  std::string color = "None";  // None means default color
   float jumpHeight = 0;
-  bool goUp = true; // jump helper
+  bool goUp = true;  // jump helper
   Vector3 destination;
   float speed;
   bool available;
   bool pickedUp;
-  //float health = 100.0;
+  // float health = 100.0;
   std::string strategyName;
   IEntity* nearestEntity = NULL;
   IStrategy* toTargetPosStrategy = NULL;
   IStrategy* toTargetDestStrategy = NULL;
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_DRONE_H_

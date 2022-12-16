@@ -1,5 +1,5 @@
-#ifndef SIMULATION_MODEL_H_
-#define SIMULATION_MODEL_H_
+#ifndef LIBS_TRANSIT_INCLUDE_SIMULATIONMODEL_H_
+#define LIBS_TRANSIT_INCLUDE_SIMULATIONMODEL_H_
 
 #include "IController.h"
 #include "CompositeFactory.h"
@@ -13,15 +13,15 @@ using namespace routing;
 /// with the controller.
 class SimulationModel {
  public:
-  SimulationModel(IController& controller);
+  SimulationModel(const IController& controller);
 
   void SetGraph(const IGraph* graph) { this->graph = graph; }
 
   /// Creates an simulation entity
-  void CreateEntity(JsonObject& entity);
+  void CreateEntity(const JsonObject& entity);
 
   /// Schedules a trip for an object in the scene
-  void ScheduleTrip(JsonObject& details);
+  void ScheduleTrip(const JsonObject& details);
 
   /// Updates the simulation
   void Update(double dt);
@@ -38,4 +38,4 @@ class SimulationModel {
   CompositeFactory* compFactory;
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_SIMULATIONMODEL_H_

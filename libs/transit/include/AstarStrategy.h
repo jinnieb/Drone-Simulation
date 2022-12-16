@@ -1,5 +1,5 @@
-#ifndef ASTAR_STRATEGY_H_
-#define ASTAR_STRATEGY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_ASTARSTRATEGY_H_
+#define LIBS_TRANSIT_INCLUDE_ASTARSTRATEGY_H_
 
 /**
  * include
@@ -12,15 +12,15 @@
  * @brief this class inhertis from the IStrategy class and is responsible for generating the beeline that the drone will take.
  */
 class AstarStrategy : public IStrategy {
-public:
+ public:
     AstarStrategy(Vector3 position, Vector3 destination, const IGraph* graph);
     ~AstarStrategy();
     void Move(IEntity* entity, double dt);
     bool IsCompleted();
 
-private:
+ private:
     std::vector<std::vector<float>> path;
     int currentIndex;
     int maxIndex;
-}; //end class
-#endif // ASTAR_STRATEGY_H_
+};  // end class
+#endif  // LIBS_TRANSIT_INCLUDE_ASTARSTRATEGY_H_

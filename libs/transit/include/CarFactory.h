@@ -1,5 +1,5 @@
-#ifndef CAR_FACTORY_H_
-#define CAR_FACTORY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_CARFACTORY_H_
+#define LIBS_TRANSIT_INCLUDE_CARFACTORY_H_
 
 #include "IEntity.h"
 #include "IEntityFactory.h"
@@ -8,9 +8,9 @@
 #include <vector>
 
 class CarFactory : public IEntityFactory {
-  public:
+ public:
     virtual ~CarFactory() {}
-    IEntity* CreateEntity(JsonObject& entity);
+    IEntity* CreateEntity(const JsonObject& entity);
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_CARFACTORY_H_

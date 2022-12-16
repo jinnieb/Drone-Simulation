@@ -1,5 +1,5 @@
-#ifndef DFS_STRATEGY_H_
-#define DFS_STRATEGY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_DFSSTRATEGY_H_
+#define LIBS_TRANSIT_INCLUDE_DFSSTRATEGY_H_
 
 /**
  * include
@@ -12,15 +12,15 @@
  * @brief this class inhertis from the IStrategy class and is responsible for generating the beeline that the drone will take.
  */
 class DfsStrategy : public IStrategy {
-public:
+ public:
     DfsStrategy(Vector3 position, Vector3 destination, const IGraph* graph);
     ~DfsStrategy();
     void Move(IEntity* entity, double dt);
     bool IsCompleted();
 
-private:
+ private:
     std::vector<std::vector<float>> path;
     int currentIndex;
     int maxIndex;
-}; //end class
-#endif // DFS_STRATEGY_H_
+};  // end class
+#endif  // LIBS_TRANSIT_INCLUDE_DFSSTRATEGY_H_

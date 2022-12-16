@@ -1,5 +1,5 @@
-#ifndef BEELINE_H_
-#define BEELINE_H_
+#ifndef LIBS_TRANSIT_INCLUDE_BEELINESTRATEGY_H_
+#define LIBS_TRANSIT_INCLUDE_BEELINESTRATEGY_H_
 
 /**
  * include
@@ -12,14 +12,14 @@
  * @brief this class inhertis from the IStrategy class and is responsible for generating the beeline that the drone will take.
  */
 class BeelineStrategy : public IStrategy {
-public:
+ public:
     BeelineStrategy(Vector3 position, Vector3 destination);
     ~BeelineStrategy();
     void Move(IEntity* entity, double dt);
     bool IsCompleted();
 
-private:
+ private:
     Vector3 position;
     Vector3 destination;
-}; //end class
-#endif // BEELINE_H_
+};  // end class
+#endif  // LIBS_TRANSIT_INCLUDE_BEELINESTRATEGY_H_

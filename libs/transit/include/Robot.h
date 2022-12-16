@@ -1,5 +1,5 @@
-#ifndef ROBOT_H
-#define ROBOT_H
+#ifndef LIBS_TRANSIT_INCLUDE_ROBOT_H_
+#define LIBS_TRANSIT_INCLUDE_ROBOT_H_
 
 #include <vector>
 
@@ -9,7 +9,7 @@
 
 class Robot : public IEntity {
  public:
-  Robot(JsonObject& obj);
+  Robot(const JsonObject& obj);
 
   ~Robot() override = default;
 
@@ -35,7 +35,9 @@ class Robot : public IEntity {
 
   void SetDestination(Vector3 des_) { destination = des_; }
 
-  void SetStrategyName(std::string strategyName_) { strategyName = strategyName_;}
+  void SetStrategyName(std::string strategyName_) {
+    strategyName = strategyName_;
+  }
 
   void Rotate(double angle);
 
@@ -49,4 +51,4 @@ class Robot : public IEntity {
   std::string strategyName;
 };
 
-#endif  // ROBOT_H
+#endif  // LIBS_TRANSIT_INCLUDE_ROBOT_H_

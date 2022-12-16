@@ -1,5 +1,5 @@
-#ifndef HELICOPTER_FACTORY_H_
-#define HELICOPTER_FACTORY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_HELICOPTERFACTORY_H_
+#define LIBS_TRANSIT_INCLUDE_HELICOPTERFACTORY_H_
 
 #include "IEntity.h"
 #include "IEntityFactory.h"
@@ -8,9 +8,9 @@
 #include <vector>
 
 class HelicopterFactory : public IEntityFactory {
-  public:
+ public:
     virtual ~HelicopterFactory() {}
-    IEntity* CreateEntity(JsonObject& entity);
+    IEntity* CreateEntity(const JsonObject& entity);
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_HELICOPTERFACTORY_H_

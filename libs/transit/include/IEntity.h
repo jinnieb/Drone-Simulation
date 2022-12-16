@@ -1,5 +1,5 @@
-#ifndef ENTITY_H_
-#define ENTITY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_IENTITY_H_
+#define LIBS_TRANSIT_INCLUDE_IENTITY_H_
 
 #include <vector>
 
@@ -28,8 +28,8 @@ class IEntity {
   virtual JsonObject GetDetails() const = 0;
   virtual std::string GetColor() const { return "None"; }
   virtual float GetSpeed() const = 0;
-  virtual bool GetAvailability() const {};
-  virtual std::string GetStrategyName(){}
+  virtual bool GetAvailability() const {}
+  virtual std::string GetStrategyName() {}
   virtual void SetAvailability(bool choice) {}
   virtual void Update(double dt, std::vector<IEntity*> scheduler) {}
   virtual void SetColor(std::string color_) {}
@@ -37,7 +37,7 @@ class IEntity {
   virtual void SetPosition(Vector3 pos_) {}
   virtual void SetDirection(Vector3 dir_) {}
   virtual void SetDestination(Vector3 des_) {}
-  virtual void SetStrategyName(std::string strategyName_){}
+  virtual void SetStrategyName(std::string strategyName_) {}
   virtual void Rotate(double angle) {}
   virtual void Jump(double height) {}
 
@@ -46,4 +46,4 @@ class IEntity {
   const IGraph* graph;
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_IENTITY_H_

@@ -1,5 +1,5 @@
-#ifndef DRONE_FACTORY_H_
-#define DRONE_FACTORY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_DRONEFACTORY_H_
+#define LIBS_TRANSIT_INCLUDE_DRONEFACTORY_H_
 
 #include "IEntity.h"
 #include "IEntityFactory.h"
@@ -8,9 +8,9 @@
 #include <vector>
 
 class DroneFactory : public IEntityFactory {
-  public:
+ public:
     virtual ~DroneFactory() {}
     IEntity* CreateEntity(JsonObject& entity);
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_DRONEFACTORY_H_

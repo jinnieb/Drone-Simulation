@@ -1,19 +1,18 @@
-#ifndef COMPOSITE_FACTORY_H_
-#define COMPOSITE_FACTORY_H_
+#ifndef LIBS_TRANSIT_INCLUDE_COMPOSITEFACTORY_H_
+#define LIBS_TRANSIT_INCLUDE_COMPOSITEFACTORY_H_
 
 #include "IEntityFactory.h"
 
 class CompositeFactory : public IEntityFactory {
-  public:
-
-    IEntity* CreateEntity(JsonObject& entity);
+ public:
+    IEntity* CreateEntity(const JsonObject& entity);
 
     void AddFactory(IEntityFactory* factoryEntity);
-    
+
     virtual ~CompositeFactory();
 
-  private:
+ private:
     std::vector<IEntityFactory*> componentFactories;
 };
 
-#endif
+#endif  // LIBS_TRANSIT_INCLUDE_COMPOSITEFACTORY_H_"

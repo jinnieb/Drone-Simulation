@@ -24,7 +24,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
 
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
-  
+
   if (type.compare("repair") == 0) {
     repairStations.push_back(myNewEntity);
     scheduler.push_back(myNewEntity);
@@ -50,7 +50,8 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
     JsonObject detailsTemp = entity->GetDetails();
     std::string nameTemp = detailsTemp["name"];
     std::string typeTemp = detailsTemp["type"];
-    if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0 && entity->GetAvailability()) {
+    if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0
+    && entity->GetAvailability()) {
       std::string strategyName = details["search"];
       entity->SetStrategyName(strategyName);
       entity->SetDestination(Vector3(end[0], end[1], end[2]));
@@ -66,9 +67,9 @@ void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
     if (dynamic_cast<DurabilityDecorator*>(entities[i]) == nullptr) {
       entities[i]->Update(dt, scheduler);
-    }
-    else {
-      dynamic_cast<DurabilityDecorator*>(entities[i])->SetRepairStations(this->repairStations);
+    } else {
+      dynamic_cast<DurabilityDecorator*>(entities[i])->
+      SetRepairStations(this->repairStations);
       entities[i]->Update(dt, scheduler);
     }
     controller.UpdateEntity(*entities[i]);

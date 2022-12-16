@@ -1,5 +1,5 @@
-#ifndef REPAIR_H
-#define REPAIR_H
+#ifndef LIBS_TRANSIT_INCLUDE_REPAIRSTATION_H_
+#define LIBS_TRANSIT_INCLUDE_REPAIRSTATION_H_
 
 #include <vector>
 
@@ -9,7 +9,7 @@
 
 class Repair : public IEntity {
  public:
-  Repair(JsonObject& obj);
+  Repair(const JsonObject& obj);
 
   ~Repair() override = default;
 
@@ -27,7 +27,9 @@ class Repair : public IEntity {
 
   std::string GetStrategyName() {return strategyName;}
 
-  void SetStrategyName(std::string strategyName_) { strategyName = strategyName_;}
+  void SetStrategyName(std::string strategyName_) {
+    strategyName = strategyName_;
+  }
 
   void SetAvailability(bool choice) {available = choice;}
 
@@ -41,4 +43,4 @@ class Repair : public IEntity {
   std::string strategyName = "astar";
 };
 
-#endif  // Repair
+#endif  // LIBS_TRANSIT_INCLUDE_REPAIRSTATION_H_
