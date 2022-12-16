@@ -9,7 +9,15 @@
 
 class IEntityFactory {
  public:
+    /**
+    * @brief Destructor
+    **/
     virtual ~IEntityFactory() {}
+    /**
+    * @brief Constructor, Creates an entity based on the JsonObject
+    *
+    * @param a Json Object
+    **/
     virtual IEntity* CreateEntity(JsonObject& entity) = 0;
 };
 

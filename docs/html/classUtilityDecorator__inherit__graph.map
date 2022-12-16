@@ -1,0 +1,5 @@
+<map id="UtilityDecorator" name="UtilityDecorator">
+<area shape="rect" id="node1" title=" " alt="" coords="17,80,144,107"/>
+<area shape="rect" id="node3" href="$classDurabilityDecorator.html" title="this class inhertis from the UtilityDecorator class." alt="" coords="5,155,156,181"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="Abstract controller class used in the Transit Service." alt="" coords="49,5,113,32"/>
+</map>

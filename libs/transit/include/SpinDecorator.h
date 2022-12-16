@@ -8,7 +8,13 @@
 
 class SpinDecorator : public CelebrationDecorator {
  public:
+  /**
+  * @brief Decorator for spin
+  **/
   SpinDecorator(IStrategy* strategy_) : CelebrationDecorator(strategy_) {}
+  /**
+  * @brief boolean for spin status 
+  **/
   bool IsCompleted();
   void Move(IEntity* entity, double dt);
 };  // close class

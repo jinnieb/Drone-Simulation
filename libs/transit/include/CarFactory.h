@@ -6,10 +6,20 @@
 #include "Car.h"
 
 #include <vector>
-
+/**
+ * @brief this class inhertis from the IEntityFactory class.
+ */
 class CarFactory : public IEntityFactory {
  public:
+    /**
+    * @brief Destructor
+    **/
     virtual ~CarFactory() {}
+    /**
+    * @brief Constructor, Creates a car entity based on the JsonObject
+    *
+    * @param a Json Object
+    **/
     IEntity* CreateEntity(JsonObject& entity);
 };
 

@@ -19,8 +19,17 @@ class DfsStrategy : public IStrategy {
     bool IsCompleted();
 
  private:
+    /**
+    * @brief vector of vector for float vaule path
+    */
     std::vector<std::vector<float>> path;
+    /**
+    * @brief integer for current index
+    */
     int currentIndex;
+    /**
+    * @brief integer for the max index
+    */
     int maxIndex;
 };  // end class
 #endif  // LIBS_TRANSIT_INCLUDE_DFSSTRATEGY_H_
