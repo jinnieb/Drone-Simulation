@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['jump_150',['Jump',['../classDrone.html#a1559fe24a5792ac72ba9d8a4a13a9ec8',1,'Drone::Jump()'],['../classIEntity.html#a4e8eb64a324e1196be039c5e2a293b7a',1,'IEntity::Jump()'],['../classUtilityDecorator.html#a7e11da4a769e91cbf697d4f77c4d4ac9',1,'UtilityDecorator::Jump()']]],
-  ['jumpdecorator_151',['JumpDecorator',['../classJumpDecorator.html#a0e488a121d506f294d2ed4b90108e10f',1,'JumpDecorator']]]
+  ['move_143',['Move',['../classCelebrationDecorator.html#aaea8fd11f7d0e12dd79ccdc63ab1bbf6',1,'CelebrationDecorator::Move()'],['../classJumpDecorator.html#a6d46675428916bbe6acd10fb25d51f86',1,'JumpDecorator::Move()'],['../classSpinDecorator.html#a766735ae467d0bb3a80169e109951804',1,'SpinDecorator::Move()']]]
 ];

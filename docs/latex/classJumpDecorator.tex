@@ -2,7 +2,7 @@
 \label{classJumpDecorator}\index{JumpDecorator@{JumpDecorator}}
 
 
-Decorator for jumping that inherits from the \mbox{\hyperlink{classCelebrationDecorator}{Celebration\+Decorator}} class.  
+this class inhertis from the \mbox{\hyperlink{classCelebrationDecorator}{Celebration\+Decorator}} class.  
 
 
 
@@ -35,18 +35,34 @@ Collaboration diagram for Jump\+Decorator\+:
 \mbox{\Hypertarget{classJumpDecorator_a0e488a121d506f294d2ed4b90108e10f}\label{classJumpDecorator_a0e488a121d506f294d2ed4b90108e10f}} 
 \mbox{\hyperlink{classJumpDecorator_a0e488a121d506f294d2ed4b90108e10f}{Jump\+Decorator}} (\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$strategy\+\_\+)
 \begin{DoxyCompactList}\small\item\em Decorator for jump. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}\label{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}} 
 bool \mbox{\hyperlink{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}{Is\+Completed}} ()
-\begin{DoxyCompactList}\small\item\em Checks if the current strategy is completed. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Check if current strategy has completed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
-\begin{DoxyCompactList}\small\item\em Moves an entity based on the jump decorator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if previous strategy has completed, if so, do current strategy movement (i.\+e., spin and/or jump) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-Decorator for jumping that inherits from the \mbox{\hyperlink{classCelebrationDecorator}{Celebration\+Decorator}} class. 
+this class inhertis from the \mbox{\hyperlink{classCelebrationDecorator}{Celebration\+Decorator}} class. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}\label{classJumpDecorator_a94b32bed5b764df15980356aa8763abe}} 
+\index{JumpDecorator@{JumpDecorator}!IsCompleted@{IsCompleted}}
+\index{IsCompleted@{IsCompleted}!JumpDecorator@{JumpDecorator}}
+\doxysubsubsection{\texorpdfstring{IsCompleted()}{IsCompleted()}}
+{\footnotesize\ttfamily bool Jump\+Decorator\+::\+Is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if current strategy has completed. 
+
+\begin{DoxyReturn}{Returns}
+A boolean value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCelebrationDecorator_a7ce83ef692d22773bf40e8733e20329a}{Celebration\+Decorator}}.
+
 \mbox{\Hypertarget{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}\label{classJumpDecorator_a6d46675428916bbe6acd10fb25d51f86}} 
 \index{JumpDecorator@{JumpDecorator}!Move@{Move}}
 \index{Move@{Move}!JumpDecorator@{JumpDecorator}}
@@ -55,13 +71,13 @@ Decorator for jumping that inherits from the \mbox{\hyperlink{classCelebrationDe
 
 
 
-Moves an entity based on the jump decorator. 
+Check if previous strategy has completed, if so, do current strategy movement (i.\+e., spin and/or jump) 
 
 
 \begin{DoxyParams}{Parameters}
-{\em entity} & The entity moved \\
+{\em a} & An \mbox{\hyperlink{classIEntity}{I\+Entity}} pointer for entity. \\
 \hline
-{\em dt} & simulation time \\
+{\em b} & A double value for delta time. \\
 \hline
 \end{DoxyParams}
 
@@ -72,5 +88,5 @@ Reimplemented from \mbox{\hyperlink{classCelebrationDecorator_aaea8fd11f7d0e12dd
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/bye00036/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/include/Jump\+Decorator.\+h\item 
-/home/bye00036/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/src/Jump\+Decorator.\+cc\end{DoxyCompactItemize}
+/home/kalla104/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/include/Jump\+Decorator.\+h\item 
+/home/kalla104/csci-\/3081w-\/f22/\+Team-\/001-\/18-\/homework04/libs/transit/src/Jump\+Decorator.\+cc\end{DoxyCompactItemize}

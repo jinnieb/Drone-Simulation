@@ -1,10 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classIEntity.html" title="Interface for Entities to be based off of." alt="" coords="5,132,69,159"/>
+<area shape="rect" id="node1" href="$classIEntity.html" title="Abstract controller class used in the Transit Service." alt="" coords="5,132,69,159"/>
 <area shape="rect" id="node2" href="$classCar.html" title="Represents a car in a physical system." alt="" coords="159,5,203,32"/>
 <area shape="rect" id="node3" href="$classDrone.html" title="Represents a drone in a physical system." alt="" coords="150,56,211,83"/>
 <area shape="rect" id="node4" href="$classHelicopter.html" title="Represents a helicopter in a physical system." alt="" coords="136,107,225,133"/>
-<area shape="rect" id="node5" href="$classRepair.html" title="Represents a repair station in a physical system." alt="" coords="149,157,213,184"/>
+<area shape="rect" id="node5" href="$classRepair.html" title=" " alt="" coords="149,157,213,184"/>
 <area shape="rect" id="node6" href="$classRobot.html" title="Represents a robot in a physical system." alt="" coords="151,208,211,235"/>
-<area shape="rect" id="node7" href="$classUtilityDecorator.html" title="Decorator for all utilities like durability." alt="" coords="117,259,244,285"/>
-<area shape="rect" id="node8" href="$classDurabilityDecorator.html" title="Decorator for durabilty inhertis from the UtilityDecorator class." alt="" coords="292,259,443,285"/>
+<area shape="rect" id="node7" href="$classUtilityDecorator.html" title=" " alt="" coords="117,259,244,285"/>
+<area shape="rect" id="node8" href="$classDurabilityDecorator.html" title="this class inhertis from the UtilityDecorator class." alt="" coords="292,259,443,285"/>
 </map>

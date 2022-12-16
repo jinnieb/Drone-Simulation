@@ -11,6 +11,7 @@ void DurabilityDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
 
     if (this->GetDurability() <= 0) {
         std::cout << "Drone has broken" << std::endl;
+        std::cout << "Exiting simulation" << std::endl;
         std::exit(EXIT_FAILURE);
         return;
         // break drone or see if there is any other drone

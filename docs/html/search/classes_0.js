@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['astarstrategy_98',['AstarStrategy',['../classAstarStrategy.html',1,'']]]
+  ['astarstrategy_93',['AstarStrategy',['../classAstarStrategy.html',1,'']]]
 ];
