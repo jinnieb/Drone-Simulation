@@ -10,7 +10,7 @@
 class IEntityFactory {
  public:
     virtual ~IEntityFactory() {}
-    virtual IEntity* CreateEntity(const JsonObject& entity) = 0;
+    virtual IEntity* CreateEntity(JsonObject& entity) = 0;
 };
 
 #endif  // LIBS_TRANSIT_INCLUDE_IENTITYFACTORY_H_

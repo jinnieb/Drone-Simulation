@@ -10,8 +10,8 @@ void DurabilityDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
     }
 
     if (this->GetDurability() <= 0) {
-        delete this->myDrone;
         std::cout << "Drone has broken" << std::endl;
+        std::exit(EXIT_FAILURE);
         return;
         // break drone or see if there is any other drone
         // near by that can take the trip and schedule it and return

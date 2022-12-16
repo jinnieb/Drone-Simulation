@@ -13,15 +13,15 @@ using namespace routing;
 /// with the controller.
 class SimulationModel {
  public:
-  SimulationModel(const IController& controller);
+  SimulationModel(IController& controller);
 
   void SetGraph(const IGraph* graph) { this->graph = graph; }
 
   /// Creates an simulation entity
-  void CreateEntity(const JsonObject& entity);
+  void CreateEntity(JsonObject& entity);
 
   /// Schedules a trip for an object in the scene
-  void ScheduleTrip(const JsonObject& details);
+  void ScheduleTrip(JsonObject& details);
 
   /// Updates the simulation
   void Update(double dt);

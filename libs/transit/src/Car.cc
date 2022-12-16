@@ -19,8 +19,8 @@ void Car::SetNewDestination() {
 }
 
 float Car::Random(float Min, float Max) {
-  return ((static_cast<float>(rand_r()) /
-  static_cast<float>(RAND_MAX)) * (Max - Min)) + Min;
+  return ((float(rand()) / float(RAND_MAX)) 
+  * (Max - Min)) + Min;
 }
 
 JsonObject Car::GetDetails() const { return details; }

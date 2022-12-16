@@ -10,7 +10,7 @@
 class CarFactory : public IEntityFactory {
  public:
     virtual ~CarFactory() {}
-    IEntity* CreateEntity(const JsonObject& entity);
+    IEntity* CreateEntity(JsonObject& entity);
 };
 
 #endif  // LIBS_TRANSIT_INCLUDE_CARFACTORY_H_

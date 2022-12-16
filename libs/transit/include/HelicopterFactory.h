@@ -10,7 +10,7 @@
 class HelicopterFactory : public IEntityFactory {
  public:
     virtual ~HelicopterFactory() {}
-    IEntity* CreateEntity(const JsonObject& entity);
+    IEntity* CreateEntity(JsonObject& entity);
 };
 
 #endif  // LIBS_TRANSIT_INCLUDE_HELICOPTERFACTORY_H_

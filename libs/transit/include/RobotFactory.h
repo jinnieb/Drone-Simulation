@@ -9,7 +9,7 @@
 
 class RobotFactory : public IEntityFactory {
  public:
-    IEntity* CreateEntity(const JsonObject& entity);
+    IEntity* CreateEntity(JsonObject& entity);
 };
 
 #endif  // LIBS_TRANSIT_INCLUDE_ROBOTFACTORY_H_

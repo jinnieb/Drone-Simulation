@@ -19,8 +19,8 @@ void Helicopter::SetNewDestination() {
 }
 
 float Helicopter::Random(float Min, float Max) {
-  return ((static_cast<float>(rand_r()) /
-  static_cast<float>(RAND_MAX)) * (Max - Min)) + Min;
+  return ((float(rand()) / float(RAND_MAX)) 
+  * (Max - Min)) + Min;
 }
 
 JsonObject Helicopter::GetDetails() const { return details; }

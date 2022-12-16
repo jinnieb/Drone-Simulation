@@ -9,7 +9,7 @@
 
 class Robot : public IEntity {
  public:
-  Robot(const JsonObject& obj);
+  Robot(JsonObject& obj);
 
   ~Robot() override = default;
 

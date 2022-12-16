@@ -10,7 +10,7 @@
 
 class Helicopter : public IEntity {
  public:
-  Helicopter(const JsonObject& obj);
+  Helicopter(JsonObject& obj);
 
   ~Helicopter() override = default;
 

@@ -13,7 +13,7 @@
 class Drone : public IEntity {
  public:
   // Drones are created with a name
-  Drone(const JsonObject& obj);
+  Drone(JsonObject& obj);
   // Destructor
   ~Drone();
 

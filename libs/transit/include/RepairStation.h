@@ -9,7 +9,7 @@
 
 class Repair : public IEntity {
  public:
-  Repair(const JsonObject& obj);
+  Repair(JsonObject& obj);
 
   ~Repair() override = default;
 

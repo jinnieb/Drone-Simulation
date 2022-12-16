@@ -9,7 +9,7 @@
 
 class RepairFactory : public IEntityFactory {
  public:
-    IEntity* CreateEntity(const JsonObject& entity);
+    IEntity* CreateEntity(JsonObject& entity);
 };
 
 #endif  // LIBS_TRANSIT_INCLUDE_REPAIRSTATIONFACTORY_H_

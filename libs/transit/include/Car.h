@@ -10,7 +10,7 @@
 
 class Car : public IEntity {
  public:
-  Car(const JsonObject& obj);
+  Car(JsonObject& obj);
 
   ~Car() override = default;
 

@@ -5,7 +5,7 @@
 
 class CompositeFactory : public IEntityFactory {
  public:
-    IEntity* CreateEntity(const JsonObject& entity);
+    IEntity* CreateEntity(JsonObject& entity);
 
     void AddFactory(IEntityFactory* factoryEntity);
 
