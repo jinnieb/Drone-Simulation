@@ -69,14 +69,19 @@ $(function() {
 <div class="title">UtilityDecorator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Decorator for all utilities like durability.  
+ <a href="classUtilityDecorator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="UtilityDecorator_8h_source.html">UtilityDecorator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for UtilityDecorator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUtilityDecorator__inherit__graph.png" border="0" usemap="#UtilityDecorator_inherit__map" alt="Inheritance graph"/></div>
 <map name="UtilityDecorator_inherit__map" id="UtilityDecorator_inherit__map">
-<area shape="rect" title=" " alt="" coords="17,80,144,107"/>
-<area shape="rect" href="classDurabilityDecorator.html" title="this class inhertis from the UtilityDecorator class." alt="" coords="5,155,156,181"/>
-<area shape="rect" href="classIEntity.html" title="Abstract controller class used in the Transit Service." alt="" coords="49,5,113,32"/>
+<area shape="rect" title="Decorator for all utilities like durability." alt="" coords="17,80,144,107"/>
+<area shape="rect" href="classDurabilityDecorator.html" title="Decorator for durabilty inhertis from the UtilityDecorator class." alt="" coords="5,155,156,181"/>
+<area shape="rect" href="classIEntity.html" title="Interface for Entities to be based off of." alt="" coords="49,5,113,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -84,8 +89,8 @@ Collaboration diagram for UtilityDecorator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUtilityDecorator__coll__graph.png" border="0" usemap="#UtilityDecorator_coll__map" alt="Collaboration graph"/></div>
 <map name="UtilityDecorator_coll__map" id="UtilityDecorator_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,132,121"/>
-<area shape="rect" href="classIEntity.html" title="Abstract controller class used in the Transit Service." alt="" coords="37,5,101,32"/>
+<area shape="rect" title="Decorator for all utilities like durability." alt="" coords="5,95,132,121"/>
+<area shape="rect" href="classIEntity.html" title="Interface for Entities to be based off of." alt="" coords="37,5,101,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -186,10 +191,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a076af11c4be71055d9bfa9739958ead0"><td class="memItemLeft" align="right" valign="top"><a id="a076af11c4be71055d9bfa9739958ead0"></a>
 <a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtilityDecorator.html#a076af11c4be71055d9bfa9739958ead0">myDrone</a></td></tr>
-<tr class="memdesc:a076af11c4be71055d9bfa9739958ead0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classIEntity.html" title="Abstract controller class used in the Transit Service.">IEntity</a> pointer for drone. <br /></td></tr>
+<tr class="memdesc:a076af11c4be71055d9bfa9739958ead0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classIEntity.html" title="Interface for Entities to be based off of.">IEntity</a> pointer for drone. <br /></td></tr>
 <tr class="separator:a076af11c4be71055d9bfa9739958ead0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a762e257201791ec271a2f40169958745"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtilityDecorator.html#a762e257201791ec271a2f40169958745">repairStations</a></td></tr>
-<tr class="memdesc:a762e257201791ec271a2f40169958745"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of <a class="el" href="classIEntity.html" title="Abstract controller class used in the Transit Service.">IEntity</a> pointers for repair stations  <a href="classUtilityDecorator.html#a762e257201791ec271a2f40169958745">More...</a><br /></td></tr>
+<tr class="memdesc:a762e257201791ec271a2f40169958745"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of <a class="el" href="classIEntity.html" title="Interface for Entities to be based off of.">IEntity</a> pointers for repair stations  <a href="classUtilityDecorator.html#a762e257201791ec271a2f40169958745">More...</a><br /></td></tr>
 <tr class="separator:a762e257201791ec271a2f40169958745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8433869bc8a4a6b9437ac3119a4d9439"><td class="memItemLeft" align="right" valign="top"><a id="a8433869bc8a4a6b9437ac3119a4d9439"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUtilityDecorator.html#a8433869bc8a4a6b9437ac3119a4d9439">durability</a></td></tr>
@@ -205,7 +210,9 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memdesc:a5d4d1c3d5da8a816fe03522cd0b4fcb3 inherit pro_attribs_classIEntity"><td class="mdescLeft">&#160;</td><td class="mdescRight">IGraph pointer for graph. <br /></td></tr>
 <tr class="separator:a5d4d1c3d5da8a816fe03522cd0b4fcb3 inherit pro_attribs_classIEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Decorator for all utilities like durability. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af27c0f8638a2296409f0a32a93a14d2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af27c0f8638a2296409f0a32a93a14d2b">&#9670;&nbsp;</a></span>GetDurability()</h2>
 
@@ -261,7 +268,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Add height. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>double for height </td></tr>
+    <tr><td class="paramname">height</td><td>double for height </td></tr>
   </table>
   </dd>
 </dl>
@@ -297,7 +304,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Rotate entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>double for rotation angle </td></tr>
+    <tr><td class="paramname">angle</td><td>double for rotation angle </td></tr>
   </table>
   </dd>
 </dl>
@@ -333,7 +340,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set availability. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>boolean for availability </td></tr>
+    <tr><td class="paramname">choice</td><td>boolean for availability </td></tr>
   </table>
   </dd>
 </dl>
@@ -369,7 +376,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>string for color </td></tr>
+    <tr><td class="paramname">color_</td><td>string for color </td></tr>
   </table>
   </dd>
 </dl>
@@ -405,7 +412,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set destination. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td><a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3(3D Vector)</a> for destination </td></tr>
+    <tr><td class="paramname">des_</td><td><a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3(3D Vector)</a> for destination </td></tr>
   </table>
   </dd>
 </dl>
@@ -441,7 +448,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set direction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td><a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3(3D Vector)</a> for direction </td></tr>
+    <tr><td class="paramname">dir_</td><td><a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3(3D Vector)</a> for direction </td></tr>
   </table>
   </dd>
 </dl>
@@ -477,7 +484,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set durability. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>float for durability </td></tr>
+    <tr><td class="paramname">durability_</td><td>float for durability </td></tr>
   </table>
   </dd>
 </dl>
@@ -503,7 +510,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>IGraph pointer for graph </td></tr>
+    <tr><td class="paramname">graph</td><td>IGraph pointer for graph </td></tr>
   </table>
   </dd>
 </dl>
@@ -537,7 +544,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td><a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3(3D Vector)</a> for position </td></tr>
+    <tr><td class="paramname">pos_</td><td><a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3(3D Vector)</a> for position </td></tr>
   </table>
   </dd>
 </dl>
@@ -573,7 +580,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set repair stations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>vector of <a class="el" href="classIEntity.html" title="Abstract controller class used in the Transit Service.">IEntity</a> pointers for repair stations </td></tr>
+    <tr><td class="paramname">repairStations_</td><td>vector of <a class="el" href="classIEntity.html" title="Interface for Entities to be based off of.">IEntity</a> pointers for repair stations </td></tr>
   </table>
   </dd>
 </dl>
@@ -607,7 +614,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Set the name of strategy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>string for strategy name </td></tr>
+    <tr><td class="paramname">strategyName_</td><td>string for strategy name </td></tr>
   </table>
   </dd>
 </dl>
@@ -653,8 +660,8 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <p>Update position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>double for delta time </td></tr>
-    <tr><td class="paramname">b</td><td>vector of entity pointers </td></tr>
+    <tr><td class="paramname">dt</td><td>double for delta time </td></tr>
+    <tr><td class="paramname">scheduler</td><td>vector of entity pointers </td></tr>
   </table>
   </dd>
 </dl>
@@ -684,14 +691,14 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </table>
 </div><div class="memdoc">
 
-<p>vector of <a class="el" href="classIEntity.html" title="Abstract controller class used in the Transit Service.">IEntity</a> pointers for repair stations </p>
+<p>vector of <a class="el" href="classIEntity.html" title="Interface for Entities to be based off of.">IEntity</a> pointers for repair stations </p>
 <p>implement this once the repair station code is created </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/kim01540/csci-3081w-f22/Team-001-18-homework04-1/libs/transit/include/<a class="el" href="UtilityDecorator_8h_source.html">UtilityDecorator.h</a></li>
-<li>/home/kim01540/csci-3081w-f22/Team-001-18-homework04-1/libs/transit/src/UtilityDecorator.cc</li>
+<li>/home/bye00036/csci-3081w-f22/Team-001-18-homework04/libs/transit/include/<a class="el" href="UtilityDecorator_8h_source.html">UtilityDecorator.h</a></li>
+<li>/home/bye00036/csci-3081w-f22/Team-001-18-homework04/libs/transit/src/UtilityDecorator.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

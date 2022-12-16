@@ -68,18 +68,23 @@ $(function() {
 <div class="title">IEntityFactory Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface for factories that create entities.  
+ <a href="classIEntityFactory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="IEntityFactory_8h_source.html">IEntityFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for IEntityFactory:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIEntityFactory__inherit__graph.png" border="0" usemap="#IEntityFactory_inherit__map" alt="Inheritance graph"/></div>
 <map name="IEntityFactory_inherit__map" id="IEntityFactory_inherit__map">
-<area shape="rect" title=" " alt="" coords="358,5,470,32"/>
-<area shape="rect" href="classCarFactory.html" title="this class inhertis from the IEntityFactory class." alt="" coords="5,80,97,107"/>
-<area shape="rect" href="classCompositeFactory.html" title="this class inhertis from the IEntityFactory class." alt="" coords="121,80,261,107"/>
-<area shape="rect" href="classDroneFactory.html" title="this class inhertis from the IEntityFactory class." alt="" coords="286,80,395,107"/>
-<area shape="rect" href="classHelicopterFactory.html" title="this class inhertis from the IEntityFactory class." alt="" coords="420,80,557,107"/>
+<area shape="rect" title="Interface for factories that create entities." alt="" coords="358,5,470,32"/>
+<area shape="rect" href="classCarFactory.html" title="Creates car entities and inherits from the IEntityFactory class." alt="" coords="5,80,97,107"/>
+<area shape="rect" href="classCompositeFactory.html" title="Aggregates all factories and inhertis from the IEntityFactory class." alt="" coords="121,80,261,107"/>
+<area shape="rect" href="classDroneFactory.html" title="Creates drone entities and inherits from the IEntityFactory class." alt="" coords="286,80,395,107"/>
+<area shape="rect" href="classHelicopterFactory.html" title="Creates helicopter entities and inherits from the IEntityFactory class." alt="" coords="420,80,557,107"/>
 <area shape="rect" href="classRepairFactory.html" title="this class inhertis from the IEntityFactory class." alt="" coords="582,80,694,107"/>
-<area shape="rect" href="classRobotFactory.html" title="this class inhertis from the IEntityFactory class." alt="" coords="719,80,827,107"/>
+<area shape="rect" href="classRobotFactory.html" title="Creates robot entities and inhertis from the IEntityFactory class." alt="" coords="719,80,827,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -93,7 +98,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a9bd53cf7ca21ab252968062ea5d88180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, Creates an entity based on the JsonObject.  <a href="classIEntityFactory.html#a9bd53cf7ca21ab252968062ea5d88180">More...</a><br /></td></tr>
 <tr class="separator:a9bd53cf7ca21ab252968062ea5d88180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for factories that create entities. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9bd53cf7ca21ab252968062ea5d88180"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bd53cf7ca21ab252968062ea5d88180">&#9670;&nbsp;</a></span>CreateEntity()</h2>
 
@@ -121,17 +128,17 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Constructor, Creates an entity based on the JsonObject. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>Json Object </td></tr>
+    <tr><td class="paramname">entity</td><td>Json Object </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classCarFactory.html#a23d79ca5453ccce26e5f5bd08d0201cc">CarFactory</a>, <a class="el" href="classDroneFactory.html#ad0d77279eacf09e49c990b7d2a86e74e">DroneFactory</a>, <a class="el" href="classHelicopterFactory.html#abd76c809755d46d0f3266539d597c7fb">HelicopterFactory</a>, <a class="el" href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">RobotFactory</a>, <a class="el" href="classCompositeFactory.html#a46a24b2fa2e5c077bd140b7075f61ff9">CompositeFactory</a>, and <a class="el" href="classRepairFactory.html#a70f2f7b392b46811801517ae68083340">RepairFactory</a>.</p>
+<p>Implemented in <a class="el" href="classCarFactory.html#a23d79ca5453ccce26e5f5bd08d0201cc">CarFactory</a>, <a class="el" href="classDroneFactory.html#ad0d77279eacf09e49c990b7d2a86e74e">DroneFactory</a>, <a class="el" href="classHelicopterFactory.html#abd76c809755d46d0f3266539d597c7fb">HelicopterFactory</a>, <a class="el" href="classRepairFactory.html#a70f2f7b392b46811801517ae68083340">RepairFactory</a>, <a class="el" href="classRobotFactory.html#ad2ceb080af7357b641332a237ae74959">RobotFactory</a>, and <a class="el" href="classCompositeFactory.html#a46a24b2fa2e5c077bd140b7075f61ff9">CompositeFactory</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/kim01540/csci-3081w-f22/Team-001-18-homework04-1/libs/transit/include/<a class="el" href="IEntityFactory_8h_source.html">IEntityFactory.h</a></li>
+<li>/home/bye00036/csci-3081w-f22/Team-001-18-homework04/libs/transit/include/<a class="el" href="IEntityFactory_8h_source.html">IEntityFactory.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
