@@ -19,7 +19,13 @@ class BeelineStrategy : public IStrategy {
     bool IsCompleted();
 
  private:
+    /**
+    * @brief Vector3(3D Vector) for position
+    */
     Vector3 position;
+    /**
+    * @brief Vector3(3D Vector) for destination
+    */
     Vector3 destination;
 };  // end class
 #endif  // LIBS_TRANSIT_INCLUDE_BEELINESTRATEGY_H_

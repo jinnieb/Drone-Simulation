@@ -1,0 +1,5 @@
+<map id="DurabilityDecorator" name="DurabilityDecorator">
+<area shape="rect" id="node1" title="Decorator for durabilty inhertis from the UtilityDecorator class." alt="" coords="5,155,156,181"/>
+<area shape="rect" id="node2" href="$classUtilityDecorator.html" title="Decorator for all utilities like durability." alt="" coords="17,80,144,107"/>
+<area shape="rect" id="node3" href="$classIEntity.html" title="Interface for Entities to be based off of." alt="" coords="49,5,113,32"/>
+</map>

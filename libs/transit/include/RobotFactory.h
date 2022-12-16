@@ -6,9 +6,16 @@
 #include "Robot.h"
 
 #include <vector>
-
+/**
+ * @brief this class inhertis from the IEntityFactory class.
+ */
 class RobotFactory : public IEntityFactory {
  public:
+    /**
+    * @brief Constructor, Creates a robot entity based on the JsonObject
+    *
+    * @param a Json Object
+    **/
     IEntity* CreateEntity(JsonObject& entity);
 };
 

@@ -6,7 +6,9 @@
 #include "RepairStation.h"
 
 #include <vector>
-
+/**
+ * @brief this class inhertis from the IEntityFactory class.
+ */
 class RepairFactory : public IEntityFactory {
  public:
     IEntity* CreateEntity(JsonObject& entity);
